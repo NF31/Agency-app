@@ -1,0 +1,663 @@
+/* Style pour la section d'accueil */
+.home {
+    overflow: hidden;
+}
+
+/* Style pour le conteneur principal de la section d'accueil */
+.container-home {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background: 0 30px 50px #f5f5f5;
+    box-shadow: 0 30px 50px #dbdbdb;
+}
+
+/* Style pour la diapositive (slide) contenant les éléments */
+.slide-home {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/* Style pour chaque élément (item) de la diapositive */
+.item-home {
+    width: 10%;
+    height: 15%;
+    background-position: 50% 50%;
+    transition: 0.5s;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    top: 70%;
+    left: 0;
+    right: 20%;
+    border-radius: 6px;
+    background-repeat: no-repeat;
+    box-shadow: 0 30px 50px #505050;
+}
+
+/* Style pour les images à l'intérieur des éléments */
+.item-home img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Style pour les deux premiers éléments de la diapositive */
+.item-home:nth-child(1),
+.item-home:nth-child(2) {
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(0, 0);
+    box-shadow: none;
+}
+
+/* Style pour le troisième élément de la diapositive */
+.item-home:nth-child(3) {
+    left: 60%;
+    border: 2px solid #ffffff;
+}
+
+/* Style pour le quatrième élément de la diapositive */
+.item-home:nth-child(4) {
+    left: 73%;
+}
+
+/* Style pour le cinquième élément de la diapositive */
+.item-home:nth-child(5) {
+    left: 86%;
+}
+
+/* Style pour les éléments après le cinquième (n+6) */
+.item-home:nth-child(n + 6) {
+    left: 80%;
+    opacity: 0;
+}
+
+/* Style pour le contenu à l'intérieur des éléments */
+.content-home {
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    padding: 0;
+    position: absolute;
+    color: #ffffff;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none;
+}
+
+/* Affichage du contenu pour le deuxième élément */
+.item-home:nth-child(2) .content-home {
+    display: block;
+}
+
+/* Style pour le nom à l'intérieur des éléments */
+.name-home {
+    font-weight: bold;
+    font-size: 40px;
+    opacity: 0;
+    text-transform: uppercase;
+    margin: 20px 0;
+    animation: showcontent 1s ease-in-out 1 forwards;
+}
+
+/* Style pour les boutons à l'intérieur des éléments */
+.item-home button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 0.7s 1 forwards;
+}
+
+/* Animation pour afficher le contenu */
+@keyframes showcontent {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+        filter: blur(0);
+    }
+}
+
+/* Style pour les boutons de navigation */
+.buttons-home {
+    position: absolute;
+    bottom: 30px;
+    z-index: 222222;
+    text-align: center;
+    width: 100%;
+}
+
+/* Style pour les boutons de navigation */
+.buttons-home button {
+    width: 50px;
+    height: 50px;
+    margin: 0 20px;
+    border-radius: 50%;
+    border: 2px solid #555555;
+    transition: 0.5s;
+}
+
+/* Style pour les icônes à l'intérieur des boutons de navigation */
+.buttons-home button i {
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons-home button:hover {
+    background: #0066eeff;
+    color: #ffffff;
+    transform: scale(1.2);
+}
+
+/* Style pour la section div-home */
+.div-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+/* Style pour la section text-home */
+.text-home {
+    text-align: center;
+    width: 50%;
+    padding: 20px;
+}
+
+.text-home h1 {
+    padding-bottom: 16px;
+}
+
+.text-home p {
+    margin-top: 20px;
+}
+
+.uno {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+/* Styles pour les boutons "See the Villas" et "See the Suites" */
+.text-home .btn {
+    height: 60px;
+    width: 200px;
+    position: relative;
+    z-index: 0;
+    transition: 2s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+   /* box-shadow: 0 0 10px #0ef;*/
+    background-color: #FF5733; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    text-decoration: none;
+    border: none;
+    overflow: hidden;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 16px;
+    margin-top: 20px; /* Marge supplémentaire par rapport au paragraphe */
+    margin-right: 8%; /* Marge entre les boutons */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.text-home .btn:hover {
+    color: #00eeff;
+    border-color: 2px solid white;
+    transition: 0.5s;
+    box-shadow: 0 4px 4px 0 rgb(215 77 62 / 20%),
+      0 4px 20px 0 rgb(215 77 62 / 19%) !important;
+  }
+
+  .text-home .btn::before {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 50% 50% 0 0;
+    transition: all .5s;
+    z-index: -1;
+  }
+
+  .text-home .btn:hover::before {
+    top: 0;
+    border-radius: 0;
+  }
+
+.btn-see-villas:hover, .btn-see-suites:hover {
+    background-color: #E64C00; /* Couleur de fond au survol */
+}
+
+/* Styles pour la section img-home */
+.img-home {
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-home img {
+    width: 49%;
+    height: 450px;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform 0.5s ease, backdrop-filter 0.5s ease, opacity 0.5s ease;
+}
+
+.img-home img:hover {
+    transform: scale(1.05); /* Ajustez cette valeur pour le niveau de zoom souhaité */
+    backdrop-filter: blur(5px);
+    opacity: 1;
+}
+
+.img-home img:nth-child(2) {
+    position: absolute;
+    top: -10%;
+    max-height: 450px;
+    right: 0;
+    transform: scale(1);
+    transition: transform 0.5s ease, backdrop-filter 0.5s ease, opacity 0.5s ease;
+}
+/* Animation pour la deuxième image */
+.img-home img:nth-child(2):hover {
+    transform: scale(1) rotateY(-180deg);
+    backdrop-filter: blur(5px);
+    opacity: 1;
+}
+
+.why{
+    margin-top: 7%;
+}
+.why .img-home img:nth-child(1) {
+margin-top: -12%;
+    max-height: 450px;
+    transform: scale(1);
+    transition: transform 0.5s ease, backdrop-filter 0.5s ease, opacity 0.5s ease;
+}
+
+.priv{
+    margin-top: 3%;
+}
+.priv .img-home img:nth-child(1) {
+margin-top: -12%;
+    max-height: 450px;
+    transform: scale(1);
+    transition: transform 0.5s ease, backdrop-filter 0.5s ease, opacity 0.5s ease;
+}
+
+.priv .img-home img:nth-child(2) {
+    top: -15%;
+    }
+
+
+/* Styles pour la section bonbon */
+.bonbon {
+    margin-top: 10%;
+}
+
+/* Styles pour la section cards */
+.cards {
+    margin: auto;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+/* Styles pour la section slide-track */
+.slide-track {
+    display: flex;
+    transition: 0.5s;
+    animation: scroll 25s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-2250px);
+    }
+}
+
+/* Styles pour la section slidere */
+.slidere {
+    width: 450px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: 15px;
+    perspective: 100px;
+    transition: 1s;
+}
+
+.slidere:hover {
+    transition: 1s;
+    transform: scale(1.3);
+    z-index: 3;
+}
+
+/* Styles pour les images dans slide-track */
+.slide-track img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
+    transition: transform 1s;
+}
+
+/* Styles pour la section cell */
+.cell {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.6s;
+    flex-direction: column;
+}
+
+.cell:hover {
+    opacity: 1;
+}
+
+/* Styles pour le texte h1 dans cell */
+.cell h1 {
+    margin-bottom: 35px;
+    font-size: 35px;
+    text-align: center;
+    color: #00b7ff;
+}
+
+/* Styles pour l'icône dans cell */
+.cell i {
+    font-size: 40px;
+    color: #00b7ff;
+}
+
+/* Styles pour les éléments enfants de cell */
+.cell > * {
+    transform: translateY(25px);
+    transition: transform 0.6s;
+}
+
+/* Styles pour les éléments enfants de cell au survol */
+.cell:hover > * {
+    transform: translateY(0);
+}
+
+/* Média query pour les écrans de taille moyenne */
+@media screen and (max-width: 991px) {
+    /* Ajustement de la taille des éléments */
+    .item-home {
+        width: 14%;
+        height: 18%;
+    }
+
+    /* Ajustement de la position du troisième élément */
+    .item-home:nth-child(3) {
+        backdrop-filter: blur(8px);
+        left: 84%;
+        top: 16%;
+    }
+
+    /* Ajustement de la position du quatrième élément */
+    .item-home:nth-child(4) {
+        backdrop-filter: blur(8px);
+        left: 84%;
+        top: 36%;
+    }
+
+    /* Ajustement de la position du cinquième élément */
+    .item-home:nth-child(5) {
+        backdrop-filter: blur(8px);
+        left: 84%;
+        top: 56%;
+        object-fit: cover;
+    }
+
+    /* Ajustement de la position des éléments après le cinquième */
+    .item-home:nth-child(n + 6) {
+        backdrop-filter: blur(8px);
+        left: 84%;
+        top: 77%;
+        opacity: 1;
+    }
+
+    /* Ajustement de la disposition de la section div-home */
+    .div-home {
+        flex-direction: column-reverse;
+    }
+
+    /* Ajustement de la disposition de la section acco */
+    .acco {
+        margin-top: 0;
+    }
+
+    /* Ajustement de la disposition de la section img-home */
+    .acco .img-home {
+        margin-top: -6%;
+    }
+
+    /* Ajustement de la disposition de la section img-home */
+    .img-home {
+        padding: 4%;
+        margin-left: -5%;
+        width: 100%;
+        margin-top: -8%;
+    }
+
+    /* Ajustement de la position de la deuxième image */
+    .img-home img:nth-child(2) {
+        top: 7%;
+    }
+
+    /* Ajustement de la disposition de la section text-home */
+    .text-home {
+        text-align: start;
+        width: 100%;
+        padding: 5%;
+        margin-top: -6%;
+    }
+
+    /* Ajustement de la disposition de la section bonbon */
+    .bonbon {
+        padding: 2%;
+        margin-top: -3%;
+    }
+
+    /* Ajustement de la disposition de la section slide-track */
+    .slide-track {
+        width: 100%;
+        animation: none;
+        display: block;
+    }
+
+    /* Ajustement de la taille des éléments slidere */
+    .slidere {
+        width: 100%;
+        height: 250px;
+    }
+
+    /* Animation au survol des éléments slidere */
+    .slidere:hover {
+        transition: 1s;
+        transform: scale(1);
+        z-index: 3;
+    }
+
+    /* Ajustement de la taille des images dans slide-track */
+    .slide-track img {
+        height: 350px;
+    }
+}
+
+/* Média query pour les écrans de taille plus petite */
+@media (max-width: 768px) {
+    /* Ajustement de la position du troisième élément */
+    .item-home:nth-child(3) {
+        backdrop-filter: blur(8px);
+        left: 84%;
+        top: 47%;
+    }
+
+    /* Ajustement de la position du quatrième élément */
+    .item-home:nth-child(4) {
+        backdrop-filter: blur(8px);
+        left: 84%;
+        top: 57%;
+    }
+
+    /* Ajustement de la position du cinquième élément */
+    .item-home:nth-child(5) {
+        backdrop-filter: blur(8px);
+        left: 84%;
+        top: 67%;
+        object-fit: cover;
+    }
+
+    /* Ajustement de la position des éléments après le cinquième */
+    .item-home:nth-child(n + 6) {
+        backdrop-filter: blur(8px);
+        left: 84%;
+        top: 77%;
+        opacity: 1;
+    }
+
+    /* Ajustement de la taille et de la position des éléments */
+    .item-home {
+        width: 20%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: none;
+    }
+
+    /* Ajustement de la disposition de la section div-home */
+    .div-home {
+        padding: 2%;
+
+    }
+
+    /* Ajustement de la taille des éléments slidere */
+    .slidere {
+        width: 100%;
+        height: 150px;
+        margin: 0;
+        align-items: normal;
+    }
+
+    /* Ajustement de la marge de la section cell */
+    .cell {
+        margin-top: 6%;
+    }
+
+    /* Ajustement de la position des boutons de navigation */
+    .buttons-home {
+        bottom: 15px;
+    }
+
+    /* Ajustement de la taille des boutons de navigation */
+    .buttons-home button {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Ajustement de la disposition de la section img-home */
+    .img-home {
+        flex-direction: column;
+    }
+
+    /* Ajustement de la taille des images dans img-home */
+    .img-home img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    /* Désactivation de l'animation slide-track */
+    .slide-track {
+        display: none;
+    }
+}
+
+/* Média query pour les écrans de taille très petite */
+@media (max-width: 480px) {
+    /* Ajustement de la taille et de la position des éléments */
+    .item-home {
+        width: 50%;
+        height: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Ajustement de la taille des boutons de navigation */
+    .buttons-home {
+        bottom: 10px;
+    }
+
+    /* Ajustement de la taille des boutons de navigation */
+    .buttons-home button {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Ajustement de la disposition de la section text-home */
+    .text-home {
+        width: 100%;
+    }
+
+    /* Ajustement de la marge entre les boutons dans text-home */
+    .text-home .btn {
+        margin-right: 0;
+    }
+
+    /* Ajustement de la disposition de la section img-home */
+    .img-home {
+        flex-direction: column;
+    }
+
+    /* Ajustement de la taille des images dans img-home */
+    .img-home img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    /* Désactivation de l'animation slide-track */
+    .slide-track {
+        display: none;
+    }
+}

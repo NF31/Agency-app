@@ -1,0 +1,234 @@
+.faqs {
+    background-image: url("/images/parc.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+        margin-bottom: 4%;
+        text-transform: uppercase;
+    }
+}
+
+.faqss {
+    .container {
+        padding: 48px 32px;
+        width: 85%;
+        margin: auto;
+    }
+    .container h2 {
+        color: #333333;
+        margin-bottom: 4%;
+        text-align: start;
+    }
+    .globe {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+    }
+    .container .left,
+    .container .right {
+        width: 50%;
+    }
+    .container h3 {
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 5%;
+        text-align: start;
+    }
+
+
+
+    .faqq {
+        width: 90%;
+        margin-top: 32px;
+        padding-bottom: 16px;
+        border-bottom: 2px solid rgba(55, 55, 55, 0.2);
+        cursor: pointer;
+        transition: border-bottom 0.3s ease; /* Ajout d'une transition pour la bordure */
+    }
+
+    .faqq.active .answer {
+        max-height: 500px;
+        animation: fade 1s ease-in-out;
+    }
+
+    .faqq.active i {
+        transform: rotate(180deg);
+        transition: transform 0.5s ease-in; /* Transition pour l'icône */
+    }
+
+    .question {
+        display: flex;
+        align-items: center;
+     justify-content: space-between;
+     transition: margin 0.3s ease; /* Transition pour la marge */
+    }
+
+    .question h3 {
+        font-size: 28px;
+    }
+
+    .question span {
+        margin-left: -40%;
+    }
+    .answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.8s ease; /* Correction de la propriété max-height */
+    }
+
+    .answer p {
+        padding-top: 16px;
+        line-height: 1.6;
+        font-size: 20px;
+    }
+
+
+
+    @keyframes fade {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    .tab {
+        position: relative;
+        background: #ffffff;
+        padding: 0 20px 20px;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .tab input {
+        appearance: none;
+    }
+
+    .tab label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .tab label::after {
+        position: absolute;
+        content: "+";
+        right: 20px;
+        font-size: 32px;
+        color: rgba(0, 0, 0, 0.928);
+        transition: transform 1.4s ease;
+    }
+
+    .tab:hover label::after {
+        color: #333333;
+    }
+
+    .tab input:checked ~ label::after {
+        transform: rotate(180deg);
+        content: "-";
+    }
+
+    .tab label h2 {
+        width: 40px;
+        height: 40px;
+        background: #333333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        font-size: 20px;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    .tab label h3 {
+        color: #333333;
+        font-weight: 500;
+        position: relative;
+        z-index: 10;
+    }
+
+    .tab .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: 1s;
+    }
+
+    .tab input:checked ~ .content {
+        max-height: 100vh;
+    }
+
+    .tab .content p {
+        position: relative;
+        padding: 10px 0;
+        line-height: 1.5;
+        font-size: 19px;
+        font-weight: 500;
+        color: #5a5a5a;
+        z-index: 10;
+    }
+
+    .whoosh {
+        width: 100%;
+    }
+
+    .message {
+        background-image: url("/images/g4.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 400px;
+        width: 100%;
+        text-align: center;
+        color: #ffffff;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .message h2 {
+        margin-bottom: 4%;
+        font-size: 25px;
+        text-transform: uppercase;
+    }
+
+    .message a button {
+        padding: 10px 20px;
+        font-size: 20px;
+        outline: none;
+        border: none;
+        color: #ffffff;
+        border-radius: 6px;
+        cursor: pointer;
+        background: rgb(0, 149, 255);
+        transition: 0.3s;
+        margin-bottom: 5%;
+    }
+
+    .message a button:hover {
+        background: transparent;
+        color: #ffffff;
+    }
+
+    .message span {
+        margin-top: 4%;
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,8263 @@
+@charset "UTF-8";
+.contact h1 {
+  margin-top: 5%;
+  text-align: center;
+  font-size: 40px;
+}
+
+.contacteme {
+  padding: 10% 10% 10% 10%;
+  /* Style de base pour le champ valide */
+  /* Style au survol du bouton */
+  /* Style au clic sur le bouton */
+  /* Style pour les champs invalides */
+}
+.contacteme h3 {
+  text-align: left;
+  margin-left: 9%;
+  font-size: 24px;
+  color: #333;
+  margin-top: 10px;
+  position: relative;
+}
+.contacteme .contacteme h3::before {
+  content: "";
+  position: absolute;
+  left: -6%;
+  top: 38%;
+  width: 5%;
+  height: 2px;
+  background-color: #333;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+.contacteme .contacteme h3::after {
+  content: "contacter";
+  left: -2%;
+  top: 100%;
+  margin-left: -1%;
+  color: #333;
+  background-color: #fff;
+  padding: 0 10px;
+}
+.contacteme .cont {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 45px 60px 0px 60px;
+}
+.contacteme .cont .left,
+.contacteme .cont .center,
+.contacteme .cont .right {
+  width: 33.33%;
+  margin: auto;
+  text-align: start;
+  line-height: 2;
+}
+.contacteme .cont .center {
+  text-align: center;
+}
+.contacteme .cont .right {
+  text-align: right;
+}
+.contacteme .map {
+  height: 500px;
+  width: 100%;
+  padding: 45px 60px 0px 60px;
+}
+.contacteme iframe {
+  width: 100%;
+  height: 100%;
+}
+.contacteme .contact-form {
+  display: flex;
+}
+.contacteme .contact-form .left,
+.contacteme .contact-form .right {
+  width: 50%;
+  padding: 45px 60px 0px 60px;
+}
+.contacteme .contact-form .left img {
+  height: 100%;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.contacteme .contact-form .right h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 2%;
+}
+.contacteme .contact-form .right p {
+  line-height: 1.7;
+  font-size: 20px;
+}
+.contacteme .formBox {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+.contacteme .inputBox {
+  position: relative;
+  margin: 0 0 35px 0;
+}
+.contacteme .inputBox input,
+.contacteme textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  resize: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #777777;
+  color: #333333;
+}
+.contacteme .inputBox label {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #333333;
+  transition: 0.3s;
+  pointer-events: none;
+  transform-origin: 0 0;
+}
+.contacteme .inputBox input:not(:-moz-placeholder-shown) ~ label, .contacteme .inputBox textarea:not(:-moz-placeholder-shown) ~ label {
+  transform: translateY(-20px);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #0ef;
+}
+.contacteme .inputBox input:focus ~ label,
+.contacteme .inputBox textarea:focus ~ label,
+.contacteme .inputBox input:not(:placeholder-shown) ~ label,
+.contacteme .inputBox textarea:not(:placeholder-shown) ~ label {
+  transform: translateY(-20px);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #0ef;
+}
+.contacteme .w50 {
+  width: 47%;
+}
+.contacteme .w100 {
+  width: 100%;
+}
+.contacteme textarea {
+  min-height: 120px;
+}
+.contacteme .error-message {
+  color: red; /* Couleur du texte en rouge */
+  font-size: 14px; /* Taille de la police */
+  /* Ajoutez d'autres styles CSS personnalisés au besoin */
+}
+.contacteme .valid-field {
+  border: 2px solid green;
+  background-color: #eaffea;
+  color: green;
+  border-radius: 4px; /* Coins arrondis */
+  padding: 10px 20px; /* Espace intérieur du bouton */
+  font-size: 16px; /* Taille de police */
+  cursor: pointer; /* Curseur de type main (pointeur) au survol */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transition en douceur pour les changements de couleur */
+}
+.contacteme .valid-field:hover {
+  background-color: #c0f9c0; /* Couleur de fond au survol */
+  color: #227f22; /* Couleur du texte au survol */
+}
+.contacteme .valid-field:active {
+  background-color: #a0e6a0; /* Couleur de fond lors du clic */
+  color: #1c5a1c; /* Couleur du texte lors du clic */
+}
+.contacteme .input-field {
+  border: 2px solid red;
+}
+.contacteme .w100 button {
+  padding: 10px 20px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+  background: rgb(0, 149, 255);
+  transition: 0.3s;
+}
+.contacteme .w100 button:hover {
+  background: transparent;
+  color: rgb(0, 149, 255);
+}
+.contacteme .toast {
+  position: relative;
+  right: 100%;
+  bottom: 20px; /* Ajustez cette valeur en fonction de l'espace souhaité entre le bouton et le toast */
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px 35px 20px 25px;
+  border-left: 6px solid #10ba00;
+  overflow: hidden;
+  transition: transform 0.5s, bottom 0.5s; /* Ajoutez la transition pour l'animation de montée du toast */
+  transform: translateX(100%);
+}
+.contacteme .toast.active {
+  transform: translateX(0%);
+}
+.contacteme .toast-content {
+  display: flex;
+  align-items: center;
+}
+.contacteme .toast-content .check {
+  height: 35px;
+  width: 35px;
+  background: #10ba00;
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contacteme .toast-content .message {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+.contacteme .message .text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #666666;
+}
+.contacteme .message .text.text-1 {
+  font-weight: 600;
+  color: #333333;
+}
+.contacteme .toast .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.contacteme .toast .close:hover {
+  opacity: 1;
+}
+.contacteme .toast .progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: #dddddd;
+  transition: width 0.5s ease; /* Ajout d'une transition pour l'animation */
+}
+.contacteme .toast .progress::before {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  right: 0;
+  background: #10ba00;
+  transition: width 0.5s ease; /* Ajout d'une transition pour l'animation */
+}
+.contacteme .progress.active::before {
+  width: 100%;
+  animation: progress 5s linear forwards;
+}
+@keyframes progress {
+  100% {
+    right: 100%;
+  }
+}
+
+.faq {
+  width: 100%;
+  background-color: #f6f6fa;
+  padding: 45px 0px 45px 0px;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  padding-left: 11%;
+}
+.faq .left,
+.faq .right {
+  width: 50%;
+}
+.faq .left {
+  align-content: center;
+  /* align-items: center;*/
+  margin: 0px 0px 0px 50px;
+  padding: 15px;
+}
+.faq .faq .left h2 {
+  margin-bottom: 4%;
+  text-align: start;
+}
+.faq .left p {
+  line-height: 1.8;
+  font-size: 20px;
+}
+.faq .right {
+  margin: auto;
+}
+.faq .right div {
+  display: flex;
+  padding: 15px;
+  margin: 0px 0px 0px 50px;
+}
+.faq .right div a button {
+  padding: 10px 20px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+  background: rgb(0, 149, 255);
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+.faq .right a button:hover {
+  background: transparent;
+  color: rgb(0, 149, 255);
+}
+
+.acti {
+  background-image: url("/images/mongolf.jpeg");
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.acti h2 {
+  margin-bottom: 4%;
+}
+
+.head {
+  text-align: center;
+}
+
+.head h2 {
+  margin-top: 4%;
+  margin-bottom: 1%;
+  font-size: 40px;
+}
+
+.activ {
+  display: flex;
+  margin-top: 3%;
+  align-items: center;
+  justify-content: center;
+}
+
+.activ .left,
+.activ .right {
+  width: 50%;
+}
+
+.activ .left {
+  padding: 4%;
+  text-align: start;
+}
+
+.activ .left h2 {
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.activ .left p {
+  letter-spacing: 3px;
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+.activ .right img {
+  height: 500px;
+  width: 100%;
+}
+
+.inazuma {
+  margin-top: -4px;
+}
+
+.sailing {
+  background-image: url("/images/yacht.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sailing h2 {
+  margin-bottom: 4%;
+}
+
+/* Style pour la section "SAILING" */
+.sailing-info {
+  padding: 10% 10% 10% 10%;
+  text-align: left; /* Alignement du texte à gauche */
+  background-color: #f9f9f9; /* Couleur de fond */
+  border: 1px solid #e0e0e0; /* Bordure */
+  border-radius: 5px; /* Coins arrondis */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Ombre */
+}
+
+.sailing-info h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333; /* Couleur du texte */
+}
+
+.sailing-info p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #666; /* Couleur du texte */
+}
+
+.massag {
+  background-image: url("/images/massage1.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.massag h2 {
+  margin-bottom: 4%;
+}
+
+.massage-service {
+  padding: 10% 10% 10% 10%;
+  text-align: left; /* Alignement du texte à gauche */
+  background-color: #f9f9f9; /* Couleur de fond */
+  border: 1px solid #e0e0e0; /* Bordure */
+  border-radius: 5px; /* Coins arrondis */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Ombre */
+}
+
+.massage-service h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333; /* Couleur du texte */
+}
+
+.massage-service p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #666; /* Couleur du texte */
+}
+
+.rest {
+  background-image: url("/images/restaurant.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.rest h2 {
+  margin-bottom: 4%;
+}
+
+.restau {
+  display: flex;
+}
+
+.restau .left,
+.restau .right {
+  width: 50%;
+}
+
+.restau .left {
+  padding: 4%;
+  text-align: start;
+  line-height: 1.4;
+}
+
+.restau .left h2 {
+  margin-bottom: 10px;
+  font-size: 50px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.restau .left span {
+  font-size: 20px;
+}
+
+.restau .left p {
+  margin-top: 5%;
+}
+
+.restau .right img {
+  height: 600px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.restau-photo h3 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-left: 2%;
+}
+
+.restau-photo .wrapper {
+  padding: 15px;
+}
+
+.wrapper .gallery {
+  margin: 0 auto; /* Centrer la grille horizontalement */
+  padding: 20px;
+  display: grid;
+  grid-gap: 10px;
+  grid-auto-flow: dense;
+  grid-auto-rows: 180px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.gallery .image span {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery .image {
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery .image img {
+  width: 100%;
+  height: 100%; /* Ajout de cette ligne pour fixer la taille */
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+
+.gallery .image:hover img {
+  transform: scale(1.1) rotate(-360deg);
+  box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+}
+
+.preview-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  padding: 0 5px 5px 5px;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+
+.preview-box.show {
+  display: flex;
+  height: 100%;
+  background: transparent;
+  width: 100%;
+  opacity: 1;
+  pointer-events: auto;
+  flex-wrap: wrap;
+}
+
+.preview-box .details {
+  color: #02adff;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 12px 15px 12px 10px;
+}
+
+.details .icon {
+  right: 5%;
+  position: absolute;
+  cursor: pointer;
+  font-size: 25px;
+  color: #0099ff;
+}
+
+.details .title {
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.details .title p {
+  margin: 0 5px;
+}
+
+.details .title .current-img {
+  font-weight: 600;
+}
+
+.preview-box .img-box {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  margin: auto;
+}
+
+.img-box .slide {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  font-size: 40px;
+  cursor: pointer;
+  color: #0099ff;
+  width: 60px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.img-box .slide.prev {
+  left: 0;
+}
+
+.img-box .slide.next {
+  right: 0;
+}
+
+.preview-box .img-box img {
+  border-radius: 8px;
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 500px;
+}
+
+.services {
+  background-image: url("/images/athenes.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  width: 100%;
+  background-repeat: no-repeat;
+  transition: 0.8s;
+  animation-name: obito;
+  animation-duration: 50s;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes obito {
+  0% {
+    background-image: url(/images/appart-accra.jpg?79b907670ae4d361a0c951592958e06d);
+  }
+  20% {
+    background-image: url(/images/appart-californie.png?fde1573ce1665971bdd15e88a028f953);
+  }
+  40% {
+    background-image: url(/images/appart-benahavis.jpg?9f580d4e74a2e9cc1ff3f768f066668e);
+  }
+  60% {
+    background-image: url(/images/appart-douala.jpg?fd6182707cd36a9e4c50e17e85fc6d9b);
+  }
+  80% {
+    background-image: url(/images/appart-afriquedusud2.jpg?13233fb424fa19c58d51bc837e334042);
+  }
+  100% {
+    background-image: url(/images/appart-marbella.jpg?3dc81650af9b07295f889e2fb4eea5da);
+  }
+}
+.entete {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  color: #ffffff;
+  font-size: 50px;
+  text-align: center; /* Centre le texte horizontalement */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.entete h2 {
+  margin-bottom: 5%;
+}
+
+#services .container {
+  margin-top: 2%;
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#services .container .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -20px;
+  margin-left: -20px;
+}
+
+#services .container .row .column {
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 100%;
+  flex: 1;
+  max-width: 100%;
+}
+
+#services .container .row .column .effect {
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+#services .container .row .column .effect .effect-img {
+  overflow: hidden;
+}
+
+#services .container .row .column .effect .effect-img img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s;
+}
+
+#services .container .row .column .effect:hover .effect-img img {
+  transform: scale(1.2);
+}
+
+#services .container .row .column .effect .effect-text {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  opacity: 0;
+}
+
+#services .container .row .column .effect .effect-text::before,
+#services .container .row .column .effect .effect-text::after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 0;
+  content: "";
+}
+
+#services .container .row .column .effect .effect-text::before {
+  border-top: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+  left: -100%;
+  top: 0;
+}
+
+#services .container .row .column .effect .effect-text::after {
+  border-bottom: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  right: 100%;
+  bottom: 0;
+}
+
+#services .container .row .column .effect .effect-text .inner {
+  position: absolute;
+  padding: 15px;
+  z-index: 1;
+}
+
+#services .container .row .column .effect:hover .effect-text {
+  opacity: 1;
+}
+
+#services .container .row .column .effect:hover .effect-text::after,
+#services .container .row .column .effect:hover .effect-text::before {
+  animation-delay: 0.1s;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#services .container .row .column .effect:hover .effect-text::after {
+  animation-name: left-up;
+}
+
+#services .container .row .column .effect:hover .effect-text::before {
+  animation-name: right-dn;
+}
+
+@keyframes left-up {
+  0% {
+    left: 100%;
+    height: 0;
+  }
+  50% {
+    left: 0;
+    height: 0;
+  }
+  100% {
+    left: 0;
+    height: 100%;
+  }
+}
+@keyframes right-dn {
+  0% {
+    left: -100%;
+    height: 0;
+  }
+  50% {
+    left: 0;
+    height: 0;
+  }
+  100% {
+    left: 0;
+    height: 100%;
+  }
+}
+#services .container .row .column .effect .effect-text .inner h2 {
+  color: #ffffff;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+#services .container .row .column .effect .effect-text .inner span {
+  color: #ffffff;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+.effect-btn {
+  margin-top: 7%;
+}
+
+.effect-btn .btn {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 7px 15px;
+  background: #ffffff;
+  color: rgb(0, 153, 255);
+}
+
+.btn i {
+  margin-left: 8px;
+}
+
+.btn {
+  text-decoration: none;
+  outline: none;
+  font-weight: 400;
+  transition: 0.5s;
+}
+
+.div-services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 45px;
+  animation-duration: 5s;
+  animation-name: glissement;
+  animation-iteration-count: 4s;
+  animation-direction: alternate;
+}
+
+@keyframes glissement {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.img-services, .text-services {
+  width: 50%;
+}
+
+.img-services {
+  position: relative;
+  padding-right: 3%;
+}
+
+.text-services {
+  text-align: start;
+  padding: 20px;
+}
+
+.text-services h2 {
+  padding-bottom: 16px;
+}
+
+.text-services p {
+  margin-top: 20px;
+  margin-bottom: 5%;
+}
+
+/* Styles de base pour le bouton */
+.text-services button {
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  width: 200px;
+  height: 48px;
+  cursor: pointer;
+  background: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0ef;
+  transition: background 0.3s ease;
+  position: relative;
+}
+
+/* Styles au survol du bouton */
+.text-services button:hover {
+  color: #00eeff;
+  background-color: #ffffff;
+  transition: 0.5s;
+  box-shadow: 0 4px 4px 0 rgba(215, 77, 62, 0.2), 0 4px 20px 0 rgba(215, 77, 62, 0.19) !important;
+}
+
+/* Pseudo-élément pour la bordure avant */
+.text-services button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 2px solid #00eeff;
+  border-right: 2px solid #00eeff;
+  animation: border-top-right 3s infinite alternate;
+}
+
+/* Pseudo-élément pour la bordure après */
+.text-services button::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 2px solid #0ef;
+  border-left: 2px solid #0ef;
+  animation: border-bottom-left 3s infinite alternate;
+}
+
+/* Animation de la bordure avant */
+@keyframes border-top-right {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  25% {
+    width: 200px;
+    height: 0px;
+  }
+  50% {
+    width: 200px;
+    height: 47px;
+  }
+  100% {
+    width: 200px;
+    height: 47px;
+  }
+}
+/* Animation de la bordure après */
+@keyframes border-bottom-left {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+  50% {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+  50.1% {
+    width: 0px;
+    height: 0px;
+    opacity: 1;
+  }
+  75% {
+    width: 200px;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 200px;
+    height: 47px;
+    opacity: 1;
+  }
+}
+/* Styles au survol du bouton */
+.text-services button:hover::before {
+  background: transparent; /* Couleur de la bordure rouge au survol */
+}
+
+.img-services::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #18a2cc;
+  width: 90%;
+  z-index: -1;
+  height: 430px;
+  margin: 50px;
+}
+
+.div-services::after {
+  content: "";
+  position: absolute;
+  top: -5%;
+  background-size: cover;
+  background-image: url("/images/restau-pisicne.jpg");
+  left: 0;
+  background-repeat: no-repeat;
+  background: #cc8c18;
+  width: 100%;
+  height: 50px;
+  z-index: -1;
+  margin: 50px;
+}
+
+.s1 {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ahbon {
+  padding-left: 3%;
+}
+
+.afoizo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10%;
+  background: #18a2cc;
+  width: 90%;
+  z-index: -1;
+  height: 455px;
+  margin: 50px;
+}
+
+.lakey::after {
+  height: 450px;
+}
+
+.vl::after {
+  height: 510px;
+}
+
+.van::after {
+  height: 480px;
+}
+
+.tech::after {
+  height: 480px;
+}
+
+.pers::after {
+  height: 425px;
+}
+
+.play {
+  margin-bottom: 3%;
+}
+
+.wedd {
+  background-image: url("/images/wedding.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+
+.wedd h2 {
+  margin-bottom: 4%;
+}
+
+.centered-div {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* Initial opacity to hide content */
+  transform: translateX(20px); /* Initial position to the right */
+  animation: slideIn 0.5s forwards; /* Animation to slide in from right */
+}
+
+.centered-div h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 2%;
+}
+
+.centered-div p {
+  font-size: 20px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.centered-div h3 {
+  font-size: 20px;
+  margin-bottom: 2%;
+  margin-top: 20px;
+}
+
+.centered-div ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.centered-div li {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+/* Animation to slide in from the right on scroll */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.wedding-wrapper {
+  max-width: 1300px;
+  padding: 15px;
+}
+
+.wedding-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  grid-auto-flow: dense;
+  grid-auto-rows: 200px;
+}
+
+.wedding-gallery span {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.wedding-image {
+  padding: 10px;
+  display: flex;
+  width: 250px;
+  align-items: center;
+  justify-content: center;
+}
+
+.wedding-image img {
+  width: 100%;
+  height: 100%; /* Ajout de cette ligne pour fixer la taille */
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+
+.wedding-image:hover img {
+  transform: scale(1.1) rotate(-360deg);
+  box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+}
+
+.wedding-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  padding: 0 5px 5px 5px;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+
+.wedding-box.show {
+  display: flex;
+  height: 100%;
+  background: transparent;
+  width: 100%;
+  opacity: 1;
+  pointer-events: auto;
+  flex-wrap: wrap;
+}
+
+.wedding-details {
+  color: #02adff;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 12px 15px 12px 10px;
+}
+
+.wedding-icon {
+  right: 5%;
+  position: absolute;
+  cursor: pointer;
+  font-size: 25px;
+  color: #0099ff;
+}
+
+.wedding-title {
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.wedding-title p {
+  margin: 0 5px;
+}
+
+.wedding-current-img {
+  font-weight: 600;
+}
+
+.wedding-img-box {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  margin: auto;
+}
+
+.wedding-slide {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  font-size: 40px;
+  cursor: pointer;
+  color: #0099ff;
+  width: 60px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.wedding-slide.beats {
+  left: 0;
+}
+
+.wedding-slide.afro {
+  right: 0;
+}
+
+.wedding-img-box img {
+  border-radius: 8px;
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 500px;
+}
+
+.desti {
+  background-image: url("/images/destination.jpg");
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.desti h2 {
+  margin-bottom: 4%;
+}
+
+.desti-heading {
+  line-height: 65px;
+  margin-top: 3%;
+  text-align: center;
+}
+
+.desti-service {
+  padding: 10% 10% 10% 10%;
+  text-align: left; /* Alignement du texte à gauche */
+  background-color: #f9f9f9; /* Couleur de fond */
+  border: 1px solid #e0e0e0; /* Bordure */
+  border-radius: 5px; /* Coins arrondis */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Ombre */
+}
+
+.desti-service p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #666; /* Couleur du texte */
+}
+
+.desti-gallery {
+  padding: 10% 10% 10% 10%;
+}
+
+.desti-gallery h2 {
+  text-align: start;
+  letter-spacing: 3px;
+}
+
+.desti-main {
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+  justify-content: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 10px;
+  grid-auto-flow: dense;
+}
+
+.desti-main img {
+  width: 300px;
+  height: 300px;
+  vertical-align: middle;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.desti-main img:hover {
+  transform: scale(0.8) rotate(-15deg);
+  border-radius: 20px;
+  box-shadow: 0 32px 7px rgba(68, 77, 136, 0.2);
+  -webkit-backdrop-filter: blur 5px;
+          backdrop-filter: blur 5px;
+}
+
+/* gallery.css */
+.gallery {
+  padding: 80px 0; /* Haut et bas: 80px, Gauche et droite: 0 */
+}
+
+.gallery h1 {
+  font-size: 48px; /* Taille de la police */
+  font-weight: 700; /* Épaisseur de la police (gras) */
+  text-align: left; /* Aligner le texte à gauche */
+  color: #e2e2e2; /* Couleur du texte (par exemple, une nuance de gris foncé) */
+  margin-top: 20px; /* Marge en haut du titre */
+  margin-bottom: 40px; /* Marge en bas du titre */
+  background-color: #f5f5f5; /* Couleur de fond (par exemple, une nuance de gris clair) */
+  padding: 20px; /* Espace interne autour du texte */
+}
+
+.mainContent {
+  padding: 32px 16px; /* Haut et bas: 32px, Gauche et droite: 16px */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* Ajuster la largeur pour deux éléments par ligne */
+.singleDestination {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  width: calc(50% - 20px); /* 50% de la largeur du parent avec un espace de 20px entre les éléments */
+  height: 400px; /* Hauteur fixe pour chaque élément */
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Ajouter un box-shadow */
+}
+
+/* Styles pour les images */
+.destImage {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.destImage img {
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Styles pour les informations en superposition */
+.overlayInfo {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s, padding 0.3s;
+}
+
+.singleDestination:hover .overlayInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  line-height: 2.5;
+  padding: 16px 24px;
+  height: 100%;
+  color: #ffffff;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background: transparent;
+}
+
+.overlayInfo h3 {
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.overlayInfo p {
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-size: 19px;
+}
+
+/* Styles pour les icônes */
+.icon a {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 4px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ff0000;
+  border: 1px solid transparent;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+
+.icon a:hover {
+  color: #0ef;
+  background: #ffffff;
+}
+
+/* Styles pour le pied de page */
+.destFooter {
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Ajouter un box-shadow */
+  border: 1px solid rgb(178, 178, 178);
+}
+
+.number {
+  font-size: 25px;
+  font-weight: 700;
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.number::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: -150%;
+  height: 5px;
+  border-radius: 16px;
+}
+
+.desText {
+  justify-content: space-between;
+}
+
+.desText h4 {
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.flex {
+  display: flex;
+  font-size: 21px;
+  font-weight: 600;
+  margin: 0px 5px;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-3px);
+}
+
+.faqs {
+  background-image: url("/images/parc.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.faqs h2 {
+  margin-bottom: 4%;
+  text-transform: uppercase;
+}
+
+.faqss .container {
+  padding: 48px 32px;
+  width: 85%;
+  margin: auto;
+}
+.faqss .container h2 {
+  color: #333333;
+  margin-bottom: 4%;
+  text-align: start;
+}
+.faqss .globe {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+.faqss .container .left,
+.faqss .container .right {
+  width: 50%;
+}
+.faqss .container h3 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 5%;
+  text-align: start;
+}
+.faqss .faqq {
+  width: 90%;
+  margin-top: 32px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid rgba(55, 55, 55, 0.2);
+  cursor: pointer;
+  transition: border-bottom 0.3s ease; /* Ajout d'une transition pour la bordure */
+}
+.faqss .faqq.active .answer {
+  max-height: 500px;
+  animation: fade 1s ease-in-out;
+}
+.faqss .faqq.active i {
+  transform: rotate(180deg);
+  transition: transform 0.5s ease-in; /* Transition pour l'icône */
+}
+.faqss .question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: margin 0.3s ease; /* Transition pour la marge */
+}
+.faqss .question h3 {
+  font-size: 28px;
+}
+.faqss .question span {
+  margin-left: -40%;
+}
+.faqss .answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease; /* Correction de la propriété max-height */
+}
+.faqss .answer p {
+  padding-top: 16px;
+  line-height: 1.6;
+  font-size: 20px;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.faqss .tab {
+  position: relative;
+  background: #ffffff;
+  padding: 0 20px 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+}
+.faqss .tab input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.faqss .tab label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.faqss .tab label::after {
+  position: absolute;
+  content: "+";
+  right: 20px;
+  font-size: 32px;
+  color: rgba(0, 0, 0, 0.928);
+  transition: transform 1.4s ease;
+}
+.faqss .tab:hover label::after {
+  color: #333333;
+}
+.faqss .tab input:checked ~ label::after {
+  transform: rotate(180deg);
+  content: "-";
+}
+.faqss .tab label h2 {
+  width: 40px;
+  height: 40px;
+  background: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.faqss .tab label h3 {
+  color: #333333;
+  font-weight: 500;
+  position: relative;
+  z-index: 10;
+}
+.faqss .tab .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s;
+}
+.faqss .tab input:checked ~ .content {
+  max-height: 100vh;
+}
+.faqss .tab .content p {
+  position: relative;
+  padding: 10px 0;
+  line-height: 1.5;
+  font-size: 19px;
+  font-weight: 500;
+  color: #5a5a5a;
+  z-index: 10;
+}
+.faqss .whoosh {
+  width: 100%;
+}
+.faqss .message {
+  background-image: url("/images/g4.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.faqss .message h2 {
+  margin-bottom: 4%;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.faqss .message a button {
+  padding: 10px 20px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+  background: rgb(0, 149, 255);
+  transition: 0.3s;
+  margin-bottom: 5%;
+}
+.faqss .message a button:hover {
+  background: transparent;
+  color: #ffffff;
+}
+.faqss .message span {
+  margin-top: 4%;
+  font-size: 25px;
+}
+
+/* Footer Styles */
+.footer {
+  margin-top: 2%;
+  background-color: rgb(0, 102, 255);
+  padding: 70px 0;
+}
+
+.lecontainer {
+  margin: auto;
+  max-width: 1170px;
+}
+
+.lerow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-cool {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-cool h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-cool h4::before {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 2px;
+  width: 50%;
+  content: "";
+  box-sizing: border-box;
+  background-color: #e91e63;
+}
+
+.footer-cool ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-cool ul li {
+  list-style: none;
+}
+
+.footer-cool ul li a {
+  list-style: none;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  color: #bbbbbb;
+  transition: all 0.3s ease;
+}
+
+.footer-cool ul li a:hover {
+  color: #ffffff;
+  padding-left: 10px;
+}
+
+.footer-cool .social-links a {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  color: #ffffff;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.footer-cool .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+.footer__copy {
+  text-align: center;
+  display: block;
+  font-size: 14px;
+  margin-top: 65px;
+  color: #ffffff;
+  opacity: 0.7;
+  letter-spacing: 0.5px;
+}
+
+/* gallery.css */
+/* ... Autres styles ... */
+/* Stylisation de la galerie d'images */
+.g-experiences {
+  padding: 60px; /* Haut et bas: 80px, Gauche et droite: 0 */
+}
+
+.g-experiences h1 {
+  font-size: 48px; /* Taille de la police */
+  font-weight: 700; /* Épaisseur de la police (gras) */
+  text-align: left; /* Aligner le texte à gauche */
+  color: #e2e2e2; /* Couleur du texte (par exemple, une nuance de gris foncé) */
+  margin-top: 20px; /* Marge en haut du titre */
+  margin-bottom: 3%; /* Marge en bas du titre */
+  background-color: transparent; /* Couleur de fond (par exemple, une nuance de gris clair) */
+}
+
+.g-experiences h3 {
+  font-size: 24px;
+}
+
+.gallery-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+.image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image:hover img {
+  /*   transform: scale(1.1);*/
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.image:hover {
+  background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent au survol */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image:hover::before {
+  opacity: 0.8;
+}
+
+/* ... Autres styles ... */
+/* gallery.css */
+/* ... Autres styles ... */
+/* Stylisation de la galerie d'images */
+.private {
+  padding: 60px; /* Haut et bas: 80px, Gauche et droite: 0 */
+}
+
+.private h1 {
+  font-size: 48px; /* Taille de la police */
+  font-weight: 700; /* Épaisseur de la police (gras) */
+  text-align: left; /* Aligner le texte à gauche */
+  color: #e2e2e2; /* Couleur du texte (par exemple, une nuance de gris foncé) */
+  margin-top: 20px; /* Marge en haut du titre */
+  margin-bottom: 3%; /* Marge en bas du titre */
+  background-color: transparent; /* Couleur de fond (par exemple, une nuance de gris clair) */
+}
+
+.private h3 {
+  font-size: 24px;
+}
+
+.private-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+.beach-image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.beach-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.beach-image:hover img {
+  /*   transform: scale(1.1);*/
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.beach-image:hover {
+  background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent au survol */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.beach-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.beach-image:hover::before {
+  opacity: 0.8;
+}
+
+/* ... Autres styles ... */
+/* gallery.css */
+/* ... Autres styles ... */
+/* Stylisation de la galerie d'images */
+.g-restaurants {
+  padding: 60px; /* Haut et bas: 80px, Gauche et droite: 0 */
+}
+
+.g-restaurants h1 {
+  font-size: 48px; /* Taille de la police */
+  font-weight: 700; /* Épaisseur de la police (gras) */
+  text-align: left; /* Aligner le texte à gauche */
+  color: #e2e2e2; /* Couleur du texte (par exemple, une nuance de gris foncé) */
+  margin-top: 20px; /* Marge en haut du titre */
+  margin-bottom: 3%; /* Marge en bas du titre */
+  background-color: transparent; /* Couleur de fond (par exemple, une nuance de gris clair) */
+}
+
+.g-restaurants h3 {
+  font-size: 24px;
+}
+
+.g-restaurants .gallery-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+.g-restaurants .image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.g-restaurants .image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.g-restaurants .image:hover img {
+  /*   transform: scale(1.1);*/
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.g-restaurants .image:hover {
+  background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent au survol */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.g-restaurants .image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.g-restaurants .image:hover::before {
+  opacity: 0.8;
+}
+
+/* ... Autres styles ... */
+/* gallery.css */
+/* ... Autres styles ... */
+/* Stylisation de la galerie d'images */
+.g-spse {
+  padding: 60px; /* Haut et bas: 80px, Gauche et droite: 0 */
+}
+
+.g-spse h1 {
+  font-size: 48px; /* Taille de la police */
+  font-weight: 700; /* Épaisseur de la police (gras) */
+  text-align: left; /* Aligner le texte à gauche */
+  color: #e2e2e2; /* Couleur du texte (par exemple, une nuance de gris foncé) */
+  margin-top: 20px; /* Marge en haut du titre */
+  margin-bottom: 3%; /* Marge en bas du titre */
+  background-color: transparent; /* Couleur de fond (par exemple, une nuance de gris clair) */
+}
+
+.g-spse h3 {
+  font-size: 24px;
+}
+
+.g-spse .gallery-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+.g-spse .image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.g-spse .image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.g-spse .image:hover img {
+  /*   transform: scale(1.1);*/
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.g-spse .image:hover {
+  background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent au survol */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.g-spse .image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.g-spse .image:hover::before {
+  opacity: 0.8;
+}
+
+/* ... Autres styles ... */
+/* gallery.css */
+/* ... Autres styles ... */
+/* Stylisation de la galerie d'images */
+.g-suits {
+  padding: 60px; /* Haut et bas: 80px, Gauche et droite: 0 */
+}
+
+.g-suits h1 {
+  font-size: 48px; /* Taille de la police */
+  font-weight: 700; /* Épaisseur de la police (gras) */
+  text-align: left; /* Aligner le texte à gauche */
+  color: #e2e2e2; /* Couleur du texte (par exemple, une nuance de gris foncé) */
+  margin-top: 20px; /* Marge en haut du titre */
+  margin-bottom: 3%; /* Marge en bas du titre */
+  background-color: transparent; /* Couleur de fond (par exemple, une nuance de gris clair) */
+}
+
+.g-suits h3 {
+  font-size: 24px;
+}
+
+.g-suits .gallery-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+.g-suits .image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.g-suits .image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.g-suits .image:hover img {
+  /*   transform: scale(1.1);*/
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.g-suits.image:hover {
+  background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent au survol */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.g-suits.image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.g-suits .image:hover::before {
+  opacity: 0.8;
+}
+
+/* ... Autres styles ... */
+/* gallery.css */
+/* ... Autres styles ... */
+/* Stylisation de la galerie d'images */
+.g-villas {
+  padding: 60px; /* Haut et bas: 80px, Gauche et droite: 0 */
+}
+
+.g-villas h1 {
+  font-size: 48px; /* Taille de la police */
+  font-weight: 700; /* Épaisseur de la police (gras) */
+  text-align: left; /* Aligner le texte à gauche */
+  color: #e2e2e2; /* Couleur du texte (par exemple, une nuance de gris foncé) */
+  margin-top: 20px; /* Marge en haut du titre */
+  margin-bottom: 3%; /* Marge en bas du titre */
+  background-color: transparent; /* Couleur de fond (par exemple, une nuance de gris clair) */
+}
+
+.g-villas h3 {
+  font-size: 24px;
+}
+
+.g-villas .gallery-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+.g-villas .image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.g-villas .image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.g-villas .image:hover img {
+  /*   transform: scale(1.1);*/
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.g-villas .image:hover {
+  background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent au survol */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.g-villas .image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.g-villas .image:hover::before {
+  opacity: 0.8;
+}
+
+/* ... Autres styles ... */
+/* Style pour la section d'accueil */
+.home {
+  overflow: hidden;
+}
+
+/* Style pour le conteneur principal de la section d'accueil */
+.container-home {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background: 0 30px 50px #f5f5f5;
+  box-shadow: 0 30px 50px #dbdbdb;
+}
+
+/* Style pour la diapositive (slide) contenant les éléments */
+.slide-home {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+/* Style pour chaque élément (item) de la diapositive */
+.item-home {
+  width: 10%;
+  height: 15%;
+  background-position: 50% 50%;
+  transition: 0.5s;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  z-index: 1;
+  top: 70%;
+  left: 0;
+  right: 20%;
+  border-radius: 6px;
+  background-repeat: no-repeat;
+  box-shadow: 0 30px 50px #505050;
+}
+
+/* Style pour les images à l'intérieur des éléments */
+.item-home img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Style pour les deux premiers éléments de la diapositive */
+.item-home:nth-child(1),
+.item-home:nth-child(2) {
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate(0, 0);
+  box-shadow: none;
+}
+
+/* Style pour le troisième élément de la diapositive */
+.item-home:nth-child(3) {
+  left: 60%;
+  border: 2px solid #ffffff;
+}
+
+/* Style pour le quatrième élément de la diapositive */
+.item-home:nth-child(4) {
+  left: 73%;
+}
+
+/* Style pour le cinquième élément de la diapositive */
+.item-home:nth-child(5) {
+  left: 86%;
+}
+
+/* Style pour les éléments après le cinquième (n+6) */
+.item-home:nth-child(n+6) {
+  left: 80%;
+  opacity: 0;
+}
+
+/* Style pour le contenu à l'intérieur des éléments */
+.content-home {
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  padding: 0;
+  position: absolute;
+  color: #ffffff;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: none;
+}
+
+/* Affichage du contenu pour le deuxième élément */
+.item-home:nth-child(2) .content-home {
+  display: block;
+}
+
+/* Style pour le nom à l'intérieur des éléments */
+.name-home {
+  font-weight: bold;
+  font-size: 40px;
+  opacity: 0;
+  text-transform: uppercase;
+  margin: 20px 0;
+  animation: showcontent 1s ease-in-out 1 forwards;
+}
+
+/* Style pour les boutons à l'intérieur des éléments */
+.item-home button {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  opacity: 0;
+  animation: showcontent 1s ease-in-out 0.7s 1 forwards;
+}
+
+/* Animation pour afficher le contenu */
+@keyframes showcontent {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+    filter: blur(0);
+  }
+}
+/* Style pour les boutons de navigation */
+.buttons-home {
+  position: absolute;
+  bottom: 30px;
+  z-index: 222222;
+  text-align: center;
+  width: 100%;
+}
+
+/* Style pour les boutons de navigation */
+.buttons-home button {
+  width: 50px;
+  height: 50px;
+  margin: 0 20px;
+  border-radius: 50%;
+  border: 2px solid #555555;
+  transition: 0.5s;
+}
+
+/* Style pour les icônes à l'intérieur des boutons de navigation */
+.buttons-home button i {
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons-home button:hover {
+  background: #0066ee;
+  color: #ffffff;
+  transform: scale(1.2);
+}
+
+/* Style pour la section div-home */
+.div-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 45px;
+}
+
+/* Style pour la section text-home */
+.text-home {
+  text-align: center;
+  width: 50%;
+  padding: 20px;
+}
+
+.text-home h1 {
+  padding-bottom: 16px;
+}
+
+.text-home p {
+  margin-top: 20px;
+}
+
+.uno {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+/* Styles pour les boutons "See the Villas" et "See the Suites" */
+.text-home .btn {
+  height: 60px;
+  width: 200px;
+  position: relative;
+  z-index: 0;
+  transition: 2s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  /* box-shadow: 0 0 10px #0ef;*/
+  background-color: #FF5733; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  text-decoration: none;
+  border: none;
+  overflow: hidden;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 16px;
+  margin-top: 20px; /* Marge supplémentaire par rapport au paragraphe */
+  margin-right: 8%; /* Marge entre les boutons */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.text-home .btn:hover {
+  color: #00eeff;
+  border-color: 2px solid white;
+  transition: 0.5s;
+  box-shadow: 0 4px 4px 0 rgba(215, 77, 62, 0.2), 0 4px 20px 0 rgba(215, 77, 62, 0.19) !important;
+}
+
+.text-home .btn::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 50% 50% 0 0;
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+.text-home .btn:hover::before {
+  top: 0;
+  border-radius: 0;
+}
+
+.btn-see-villas:hover, .btn-see-suites:hover {
+  background-color: #E64C00; /* Couleur de fond au survol */
+}
+
+/* Styles pour la section img-home */
+.img-home {
+  width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-home img {
+  width: 49%;
+  height: 450px;
+  max-height: 450px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.5s ease, opacity 0.5s ease, -webkit-backdrop-filter 0.5s ease;
+  transition: transform 0.5s ease, backdrop-filter 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, backdrop-filter 0.5s ease, opacity 0.5s ease, -webkit-backdrop-filter 0.5s ease;
+}
+
+.img-home img:hover {
+  transform: scale(1.05); /* Ajustez cette valeur pour le niveau de zoom souhaité */
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  opacity: 1;
+}
+
+.img-home img:nth-child(2) {
+  position: absolute;
+  top: -10%;
+  max-height: 450px;
+  right: 0;
+  transform: scale(1);
+  transition: transform 0.5s ease, opacity 0.5s ease, -webkit-backdrop-filter 0.5s ease;
+  transition: transform 0.5s ease, backdrop-filter 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, backdrop-filter 0.5s ease, opacity 0.5s ease, -webkit-backdrop-filter 0.5s ease;
+}
+
+/* Animation pour la deuxième image */
+.img-home img:nth-child(2):hover {
+  transform: scale(1) rotateY(-180deg);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  opacity: 1;
+}
+
+.why {
+  margin-top: 7%;
+}
+
+.why .img-home img:nth-child(1) {
+  margin-top: -12%;
+  max-height: 450px;
+  transform: scale(1);
+  transition: transform 0.5s ease, opacity 0.5s ease, -webkit-backdrop-filter 0.5s ease;
+  transition: transform 0.5s ease, backdrop-filter 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, backdrop-filter 0.5s ease, opacity 0.5s ease, -webkit-backdrop-filter 0.5s ease;
+}
+
+.priv {
+  margin-top: 3%;
+}
+
+.priv .img-home img:nth-child(1) {
+  margin-top: -12%;
+  max-height: 450px;
+  transform: scale(1);
+  transition: transform 0.5s ease, opacity 0.5s ease, -webkit-backdrop-filter 0.5s ease;
+  transition: transform 0.5s ease, backdrop-filter 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, backdrop-filter 0.5s ease, opacity 0.5s ease, -webkit-backdrop-filter 0.5s ease;
+}
+
+.priv .img-home img:nth-child(2) {
+  top: -15%;
+}
+
+/* Styles pour la section bonbon */
+.bonbon {
+  margin-top: 10%;
+}
+
+/* Styles pour la section cards */
+.cards {
+  margin: auto;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+/* Styles pour la section slide-track */
+.slide-track {
+  display: flex;
+  transition: 0.5s;
+  animation: scroll 25s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2250px);
+  }
+}
+/* Styles pour la section slidere */
+.slidere {
+  width: 450px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin: 15px;
+  perspective: 100px;
+  transition: 1s;
+}
+
+.slidere:hover {
+  transition: 1s;
+  transform: scale(1.3);
+  z-index: 3;
+}
+
+/* Styles pour les images dans slide-track */
+.slide-track img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
+  transition: transform 1s;
+}
+
+/* Styles pour la section cell */
+.cell {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.6s;
+  flex-direction: column;
+}
+
+.cell:hover {
+  opacity: 1;
+}
+
+/* Styles pour le texte h1 dans cell */
+.cell h1 {
+  margin-bottom: 35px;
+  font-size: 35px;
+  text-align: center;
+  color: #00b7ff;
+}
+
+/* Styles pour l'icône dans cell */
+.cell i {
+  font-size: 40px;
+  color: #00b7ff;
+}
+
+/* Styles pour les éléments enfants de cell */
+.cell > * {
+  transform: translateY(25px);
+  transition: transform 0.6s;
+}
+
+/* Styles pour les éléments enfants de cell au survol */
+.cell:hover > * {
+  transform: translateY(0);
+}
+
+/* Média query pour les écrans de taille moyenne */
+@media screen and (max-width: 991px) {
+  /* Ajustement de la taille des éléments */
+  .item-home {
+    width: 14%;
+    height: 18%;
+  }
+  /* Ajustement de la position du troisième élément */
+  .item-home:nth-child(3) {
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    left: 84%;
+    top: 16%;
+  }
+  /* Ajustement de la position du quatrième élément */
+  .item-home:nth-child(4) {
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    left: 84%;
+    top: 36%;
+  }
+  /* Ajustement de la position du cinquième élément */
+  .item-home:nth-child(5) {
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    left: 84%;
+    top: 56%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  /* Ajustement de la position des éléments après le cinquième */
+  .item-home:nth-child(n+6) {
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    left: 84%;
+    top: 77%;
+    opacity: 1;
+  }
+  /* Ajustement de la disposition de la section div-home */
+  .div-home {
+    flex-direction: column-reverse;
+  }
+  /* Ajustement de la disposition de la section acco */
+  .acco {
+    margin-top: 0;
+  }
+  /* Ajustement de la disposition de la section img-home */
+  .acco .img-home {
+    margin-top: -6%;
+  }
+  /* Ajustement de la disposition de la section img-home */
+  .img-home {
+    padding: 4%;
+    margin-left: -5%;
+    width: 100%;
+    margin-top: -8%;
+  }
+  /* Ajustement de la position de la deuxième image */
+  .img-home img:nth-child(2) {
+    top: 7%;
+  }
+  /* Ajustement de la disposition de la section text-home */
+  .text-home {
+    text-align: start;
+    width: 100%;
+    padding: 5%;
+    margin-top: -6%;
+  }
+  /* Ajustement de la disposition de la section bonbon */
+  .bonbon {
+    padding: 2%;
+    margin-top: -3%;
+  }
+  /* Ajustement de la disposition de la section slide-track */
+  .slide-track {
+    width: 100%;
+    animation: none;
+    display: block;
+  }
+  /* Ajustement de la taille des éléments slidere */
+  .slidere {
+    width: 100%;
+    height: 250px;
+  }
+  /* Animation au survol des éléments slidere */
+  .slidere:hover {
+    transition: 1s;
+    transform: scale(1);
+    z-index: 3;
+  }
+  /* Ajustement de la taille des images dans slide-track */
+  .slide-track img {
+    height: 350px;
+  }
+}
+/* Média query pour les écrans de taille plus petite */
+@media (max-width: 768px) {
+  /* Ajustement de la position du troisième élément */
+  .item-home:nth-child(3) {
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    left: 84%;
+    top: 47%;
+  }
+  /* Ajustement de la position du quatrième élément */
+  .item-home:nth-child(4) {
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    left: 84%;
+    top: 57%;
+  }
+  /* Ajustement de la position du cinquième élément */
+  .item-home:nth-child(5) {
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    left: 84%;
+    top: 67%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  /* Ajustement de la position des éléments après le cinquième */
+  .item-home:nth-child(n+6) {
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    left: 84%;
+    top: 77%;
+    opacity: 1;
+  }
+  /* Ajustement de la taille et de la position des éléments */
+  .item-home {
+    width: 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: none;
+  }
+  /* Ajustement de la disposition de la section div-home */
+  .div-home {
+    padding: 2%;
+  }
+  /* Ajustement de la taille des éléments slidere */
+  .slidere {
+    width: 100%;
+    height: 150px;
+    margin: 0;
+    align-items: normal;
+  }
+  /* Ajustement de la marge de la section cell */
+  .cell {
+    margin-top: 6%;
+  }
+  /* Ajustement de la position des boutons de navigation */
+  .buttons-home {
+    bottom: 15px;
+  }
+  /* Ajustement de la taille des boutons de navigation */
+  .buttons-home button {
+    width: 40px;
+    height: 40px;
+  }
+  /* Ajustement de la disposition de la section img-home */
+  .img-home {
+    flex-direction: column;
+  }
+  /* Ajustement de la taille des images dans img-home */
+  .img-home img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  /* Désactivation de l'animation slide-track */
+  .slide-track {
+    display: none;
+  }
+}
+/* Média query pour les écrans de taille très petite */
+@media (max-width: 480px) {
+  /* Ajustement de la taille et de la position des éléments */
+  .item-home {
+    width: 50%;
+    height: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /* Ajustement de la taille des boutons de navigation */
+  .buttons-home {
+    bottom: 10px;
+  }
+  /* Ajustement de la taille des boutons de navigation */
+  .buttons-home button {
+    width: 30px;
+    height: 30px;
+  }
+  /* Ajustement de la disposition de la section text-home */
+  .text-home {
+    width: 100%;
+  }
+  /* Ajustement de la marge entre les boutons dans text-home */
+  .text-home .btn {
+    margin-right: 0;
+  }
+  /* Ajustement de la disposition de la section img-home */
+  .img-home {
+    flex-direction: column;
+  }
+  /* Ajustement de la taille des images dans img-home */
+  .img-home img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  /* Désactivation de l'animation slide-track */
+  .slide-track {
+    display: none;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* Styles pour la barre de navigation */
+.navbar {
+  background-color: #0078d4; /* Couleur bleu océan pour la barre de navigation */
+  padding: 10px 20px;
+  color: #fff; /* Couleur blanche pour le texte */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 100px; /* Largeur maximale du logo */
+}
+
+.navlinks-container {
+  display: flex;
+  align-items: center;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+}
+
+.links li {
+  margin-right: 30px;
+  position: relative;
+}
+
+.links li a {
+  color: #fff; /* Couleur blanche pour les liens de navigation */
+  text-decoration: none;
+}
+
+.arrow {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -20px;
+}
+
+/* Styles pour le menu déroulant */
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: #0078d4; /* Couleur bleu océan pour le menu déroulant */
+  min-width: 150px;
+  padding: 10px;
+  list-style: none;
+  margin: 0;
+}
+
+.sub-menu li {
+  margin-bottom: 10px;
+}
+
+/* Styles pour les liens "Login" et "Register" */
+.auth-links a {
+  color: #fff; /* Couleur blanche pour les liens d'authentification */
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.bali-m {
+  margin-top: 5%;
+  background-image: url("/images/Bali-Villa.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  width: 80%;
+  padding: 48px 32px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  background-repeat: no-repeat;
+}
+
+/* Styles d'animation pour .house-m */
+.bali-m.fade-in {
+  opacity: 1;
+  /* L'opacité devient 1 pour montrer l'élément */
+  transform: translateY(0);
+  /* Retour à la position d'origine */
+}
+
+/* Style d'animation pour la section .house-m */
+.bali-m.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bali-titre,
+.bali-gallery {
+  margin: auto;
+  width: 85%;
+  display: flex;
+  padding: 48px 32px;
+}
+
+.bali-titre .left {
+  width: 33.333%;
+}
+
+.bali-titre .center {
+  width: 50%;
+  margin-top: -3%;
+}
+
+.bali-titre .right {
+  width: 16.333%;
+}
+
+.bali-titre .left {
+  padding: 10px;
+  align-content: center;
+  align-items: center;
+}
+
+.bali-titre .center {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+}
+
+.axe {
+  padding: 10px 10px 10px 10px;
+  width: 33.333%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.axe img {
+  color: #00b7ff;
+  width: 85px;
+  margin-bottom: 5%;
+}
+
+.axe span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.bali-titre .right {
+  padding: 10px;
+  text-align: right;
+}
+
+.bali-titre .right a {
+  display: inline-block;
+  line-height: 1;
+  background-color: #818a91;
+  font-size: 15px;
+  padding: 12px 24px;
+  border-radius: 3px;
+  color: #fff;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.bali-description {
+  padding: 48px 32px;
+  /*  padding: 100px 0px 100px 0px;*/
+  margin: auto;
+  width: 85%;
+  display: flex;
+}
+
+.bali-description .left,
+.bali-description .center,
+.bali-description .right {
+  width: 33.333%;
+}
+
+.bali-description .left,
+.bali-description .center,
+.bali-description .right {
+  padding: 32px 25px 25px 25px;
+}
+
+.bali-description .left h1 {
+  margin-left: -3%;
+}
+
+.bali-description .center h1 {
+  text-align: start;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+}
+
+.bali-description .center p {
+  line-height: 29px;
+  text-align: left;
+}
+
+.bali-description .right .bottom {
+  margin-bottom: 15px;
+}
+
+.bali-description .right p {
+  line-height: 29px;
+  text-align: right;
+}
+
+.bali-gallery h2 {
+  width: 25%;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.bali-gallery img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.bali-gallery img:hover {
+  transform: scale(1.05);
+  /* Augmente la taille de l'image au survol */
+}
+
+.bali-gallery .grid-wrapper {
+  display: grid;
+  width: 75%;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.bali-gallery .grid-wrapper .wide {
+  grid-column: span 2;
+}
+
+.bali-gallery .grid-wrapper .tall {
+  grid-row: span 2;
+}
+
+.bali-gallery .grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.bali-gallery .grid-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bali-gallery .grid-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.bali-see {
+  padding: 48px 32px;
+  margin: auto;
+  width: 85%;
+}
+
+/* Conteneur principal du carrousel */
+.bali-see .slider {
+  height: 100%;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Pseudo-éléments pour créer un dégradé sur les côtés du carrousel */
+.bali-see .slider::before,
+.bali-see .slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15px; /* Largeur des dégradés (ajustez selon vos préférences) */
+  height: 100%;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
+
+.bali-see .slider::before {
+  left: 0;
+  top: 0;
+}
+
+.bali-see .slider::after {
+  right: 0;
+  top: 0;
+}
+
+.slider-track {
+  display: flex;
+  margin-top: 10%;
+  /*  width: 4500px;*/
+  /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  animation: miamih 40s linear infinite;
+}
+
+@keyframes miamih {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-4500px);
+    /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  }
+}
+/* Conteneur pour les diapositives (slides) */
+.bali-see .slider .slide {
+  width: 650px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  perspective: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transitions pour l'effet de zoom et les ombres */
+  margin: 20px; /* Marge entre les diapositives (ajustez selon vos préférences) */
+}
+
+/* Effet de zoom au survol */
+.bali-see .slider .slide:hover {
+  transform: scale(1.05); /* Effet de zoom au survol */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Ombre douce au survol */
+  filter: brightness(1.2); /* Luminosité accrue au survol */
+}
+
+/* Style de l'image à l'intérieur de la diapositive */
+.bali-see .slider .slide a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* CSS pour arrêter l'animation de défilement (si nécessaire)*/
+.stop-scrolling {
+  animation-play-state: paused !important;
+}
+
+.bali-see .slider .slide .villas-contenu {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+/* Style du texte dans la div .villas-contenu */
+.bali-see .slider .slide .villas-contenu .text p a, .miami-see .slider .slide .villas-contenu .text span a {
+  font-size: 20px; /* Taille de police (ajustez selon vos préférences) */
+  color: rgb(0, 195, 255); /* Couleur du texte (ajustez selon vos préférences) */
+  margin: 0;
+  padding: 10px;
+  margin-bottom: 2%;
+  line-height: 5px;
+  font-size: 34px;
+  transition: opacity 0.3s ease; /* Transition pour l'opacité du texte */
+}
+
+.bali-see .slider .slide .villas-contenu .text {
+  margin-left: -2%;
+  font-size: 21px;
+}
+
+.bali-see .slider .slide .villas-contenu .text span a {
+  margin-bottom: 3%;
+  margin-top: 1%;
+  font-size: 24px;
+}
+
+/* Ajustez l'opacité de la div .villas-contenu au survol */
+.bali-see .slider .slide:hover .villas-contenu {
+  opacity: 1;
+}
+
+/* Ajustez l'espacement entre les éléments .icons */
+.bali-see .slider .slide .villas-contenu .icons {
+  margin-top: 5%; /* Espacement vers le haut */
+}
+
+/* Style pour les éléments dans la div .icons */
+.bali-see .slider .slide .villas-contenu .icons div img {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+}
+
+/* Style spécifique pour les éléments de texte dans la div .icons */
+.bali-see .slider .slide .villas-contenu .icons span {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+  margin-bottom: 5%;
+  font-size: 24px;
+}
+
+.london-m {
+  margin-top: 5%;
+  background-image: url("/images/suits-london/London-Skylines.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  width: 80%;
+  padding: 48px 32px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  background-repeat: no-repeat;
+}
+
+/* Styles d'animation pour .house-m */
+.london-m.fade-in {
+  opacity: 1;
+  /* L'opacité devient 1 pour montrer l'élément */
+  transform: translateY(0);
+  /* Retour à la position d'origine */
+}
+
+/* Style d'animation pour la section .house-m */
+.london-m.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.london-titre,
+.london-gallery {
+  margin: auto;
+  width: 85%;
+  display: flex;
+  padding: 48px 32px;
+}
+
+.london-titre .left {
+  width: 33.333%;
+}
+
+.london-titre .center {
+  width: 50%;
+  margin-top: -3%;
+}
+
+.london-titre .right {
+  width: 16.333%;
+}
+
+.london-titre .left {
+  padding: 10px;
+  align-content: center;
+  align-items: center;
+}
+
+.london-titre .center {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+}
+
+.axe {
+  padding: 10px 10px 10px 10px;
+  width: 33.333%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.axe img {
+  color: #00b7ff;
+  width: 85px;
+  margin-bottom: 5%;
+}
+
+.axe span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.london-titre .right {
+  padding: 10px;
+  text-align: right;
+}
+
+.london-titre .right a {
+  display: inline-block;
+  line-height: 1;
+  background-color: #818a91;
+  font-size: 15px;
+  padding: 12px 24px;
+  border-radius: 3px;
+  color: #fff;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.london-description {
+  padding: 48px 32px;
+  /*  padding: 100px 0px 100px 0px;*/
+  margin: auto;
+  width: 85%;
+  display: flex;
+}
+
+.london-description .left,
+.london-description .center,
+.london-description .right {
+  width: 33.333%;
+}
+
+.london-description .left,
+.london-description .center,
+.london-description .right {
+  padding: 32px 25px 25px 25px;
+}
+
+.london-description .left h1 {
+  margin-left: -3%;
+}
+
+.london-description .center h1 {
+  text-align: start;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+}
+
+.london-description .center p {
+  line-height: 29px;
+  text-align: left;
+}
+
+.london-description .right .bottom {
+  margin-bottom: 15px;
+}
+
+.london-description .right p {
+  line-height: 29px;
+  text-align: right;
+}
+
+.london-gallery h2 {
+  width: 25%;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.london-gallery img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.london-gallery img:hover {
+  transform: scale(1.05);
+  /* Augmente la taille de l'image au survol */
+}
+
+.london-gallery .grid-wrapper {
+  display: grid;
+  width: 75%;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.london-gallery .grid-wrapper .wide {
+  grid-column: span 2;
+}
+
+.london-gallery .grid-wrapper .tall {
+  grid-row: span 2;
+}
+
+.london-gallery .grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.london-gallery .grid-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.london-gallery .grid-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.london-see {
+  padding: 48px 32px;
+  margin: auto;
+  width: 85%;
+}
+
+/* Conteneur principal du carrousel */
+.london-see .slider {
+  height: 100%;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Pseudo-éléments pour créer un dégradé sur les côtés du carrousel */
+.london-see .slider::before,
+.london-see .slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15px; /* Largeur des dégradés (ajustez selon vos préférences) */
+  height: 100%;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
+
+.london-see .slider::before {
+  left: 0;
+  top: 0;
+}
+
+.london-see .slider::after {
+  right: 0;
+  top: 0;
+}
+
+.slider-track {
+  display: flex;
+  margin-top: 10%;
+  /*  width: 4500px;*/
+  /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  animation: miamih 40s linear infinite;
+}
+
+@keyframes miamih {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-4500px);
+    /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  }
+}
+/* Conteneur pour les diapositives (slides) */
+.london-see .slider .slide {
+  width: 650px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  perspective: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transitions pour l'effet de zoom et les ombres */
+  margin: 20px; /* Marge entre les diapositives (ajustez selon vos préférences) */
+}
+
+/* Effet de zoom au survol */
+.london-see .slider .slide:hover {
+  transform: scale(1.05); /* Effet de zoom au survol */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Ombre douce au survol */
+  filter: brightness(1.2); /* Luminosité accrue au survol */
+}
+
+/* Style de l'image à l'intérieur de la diapositive */
+.london-see .slider .slide a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* CSS pour arrêter l'animation de défilement (si nécessaire)*/
+.stop-scrolling {
+  animation-play-state: paused !important;
+}
+
+.london-see .slider .slide .villas-contenu {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+/* Style du texte dans la div .villas-contenu */
+.london-see .slider .slide .villas-contenu .text p a, .miami-see .slider .slide .villas-contenu .text span a {
+  font-size: 20px; /* Taille de police (ajustez selon vos préférences) */
+  color: rgb(0, 195, 255); /* Couleur du texte (ajustez selon vos préférences) */
+  margin: 0;
+  padding: 10px;
+  margin-bottom: 2%;
+  line-height: 5px;
+  font-size: 34px;
+  transition: opacity 0.3s ease; /* Transition pour l'opacité du texte */
+}
+
+.london-see .slider .slide .villas-contenu .text {
+  margin-left: -2%;
+  font-size: 21px;
+}
+
+.london-see .slider .slide .villas-contenu .text span a {
+  margin-bottom: 3%;
+  margin-top: 1%;
+  font-size: 24px;
+}
+
+/* Ajustez l'opacité de la div .villas-contenu au survol */
+.london-see .slider .slide:hover .villas-contenu {
+  opacity: 1;
+}
+
+/* Ajustez l'espacement entre les éléments .icons */
+.london-see .slider .slide .villas-contenu .icons {
+  margin-top: 5%; /* Espacement vers le haut */
+}
+
+/* Style pour les éléments dans la div .icons */
+.london-see .slider .slide .villas-contenu .icons div img {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+}
+
+/* Style spécifique pour les éléments de texte dans la div .icons */
+.london-see .slider .slide .villas-contenu .icons span {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+  margin-bottom: 5%;
+  font-size: 24px;
+}
+
+.marrakech-m {
+  margin-top: 5%;
+  background-image: url("/images/suits-marrakech/marrakech11.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  width: 80%;
+  padding: 48px 32px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  background-repeat: no-repeat;
+}
+
+/* Styles d'animation pour .house-m */
+.marrakech-m.fade-in {
+  opacity: 1;
+  /* L'opacité devient 1 pour montrer l'élément */
+  transform: translateY(0);
+  /* Retour à la position d'origine */
+}
+
+/* Style d'animation pour la section .house-m */
+.marrakech-m.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.marrakech-titre,
+.marrakech-gallery {
+  margin: auto;
+  width: 85%;
+  display: flex;
+  padding: 48px 32px;
+}
+
+.marrakech-titre .left {
+  width: 33.333%;
+}
+
+.marrakech-titre .center {
+  width: 50%;
+  margin-top: -3%;
+}
+
+.marrakech-titre .right {
+  width: 16.333%;
+}
+
+.marrakech-titre .left {
+  padding: 10px;
+  align-content: center;
+  align-items: center;
+}
+
+.marrakech-titre .center {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+}
+
+.axe {
+  padding: 10px 10px 10px 10px;
+  width: 33.333%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.axe img {
+  color: #00b7ff;
+  width: 85px;
+  margin-bottom: 5%;
+}
+
+.axe span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.tokyo-titre .right {
+  padding: 10px;
+  text-align: right;
+}
+
+.marrakech-titre .right a {
+  display: inline-block;
+  line-height: 1;
+  background-color: #818a91;
+  font-size: 15px;
+  padding: 12px 24px;
+  border-radius: 3px;
+  color: #fff;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.marrakech-description {
+  padding: 48px 32px;
+  /*  padding: 100px 0px 100px 0px;*/
+  margin: auto;
+  width: 85%;
+  display: flex;
+}
+
+.marrakech-description .left,
+.marrakech-description .center,
+.marrakech-description .right {
+  width: 33.333%;
+}
+
+.marrakech-description .left,
+.marrakech-description .center,
+.marrakech-description .right {
+  padding: 32px 25px 25px 25px;
+}
+
+.marrakech-description .left h1 {
+  margin-left: -3%;
+}
+
+.marrakech-description .center h1 {
+  text-align: start;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+}
+
+.marrakech-description .center p {
+  line-height: 29px;
+  text-align: left;
+}
+
+.marrakech-description .right .bottom {
+  margin-bottom: 15px;
+}
+
+.marrakech-description .right p {
+  line-height: 29px;
+  text-align: right;
+}
+
+.marrakech-gallery h2 {
+  width: 25%;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.marrakech-gallery img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.marrakech-gallery img:hover {
+  transform: scale(1.05);
+  /* Augmente la taille de l'image au survol */
+}
+
+.marrakech-gallery .grid-wrapper {
+  display: grid;
+  width: 75%;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.marrakech-gallery .grid-wrapper .wide {
+  grid-column: span 2;
+}
+
+.marrakech-gallery .grid-wrapper .tall {
+  grid-row: span 2;
+}
+
+.marrakech-gallery .grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.marrakech-gallery .grid-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marrakech-gallery .grid-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.marrakech-see {
+  padding: 48px 32px;
+  margin: auto;
+  width: 85%;
+}
+
+/* Conteneur principal du carrousel */
+.marrakech-see .slider {
+  height: 100%;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Pseudo-éléments pour créer un dégradé sur les côtés du carrousel */
+.marrakech-see .slider::before,
+.marrakech-see .slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15px; /* Largeur des dégradés (ajustez selon vos préférences) */
+  height: 100%;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
+
+.marrakech-see .slider::before {
+  left: 0;
+  top: 0;
+}
+
+.marrakech-see .slider::after {
+  right: 0;
+  top: 0;
+}
+
+.slider-track {
+  display: flex;
+  margin-top: 10%;
+  /*  width: 4500px;*/
+  /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  animation: miamih 40s linear infinite;
+}
+
+@keyframes miamih {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-4500px);
+    /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  }
+}
+/* Conteneur pour les diapositives (slides) */
+.marrakech-see .slider .slide {
+  width: 650px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  perspective: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transitions pour l'effet de zoom et les ombres */
+  margin: 20px; /* Marge entre les diapositives (ajustez selon vos préférences) */
+}
+
+/* Effet de zoom au survol */
+.marrakech-see .slider .slide:hover {
+  transform: scale(1.05); /* Effet de zoom au survol */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Ombre douce au survol */
+  filter: brightness(1.2); /* Luminosité accrue au survol */
+}
+
+/* Style de l'image à l'intérieur de la diapositive */
+.marrakech-see .slider .slide a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* CSS pour arrêter l'animation de défilement (si nécessaire)*/
+.stop-scrolling {
+  animation-play-state: paused !important;
+}
+
+.marrakech-see .slider .slide .villas-contenu {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+/* Style du texte dans la div .villas-contenu */
+.marrakech-see .slider .slide .villas-contenu .text p a, .miami-see .slider .slide .villas-contenu .text span a {
+  font-size: 20px; /* Taille de police (ajustez selon vos préférences) */
+  color: rgb(0, 195, 255); /* Couleur du texte (ajustez selon vos préférences) */
+  margin: 0;
+  padding: 10px;
+  margin-bottom: 2%;
+  line-height: 5px;
+  font-size: 34px;
+  transition: opacity 0.3s ease; /* Transition pour l'opacité du texte */
+}
+
+.marrakech-see .slider .slide .villas-contenu .text {
+  margin-left: -2%;
+  font-size: 21px;
+}
+
+.marrakech-see .slider .slide .villas-contenu .text span a {
+  margin-bottom: 3%;
+  margin-top: 1%;
+  font-size: 24px;
+}
+
+/* Ajustez l'opacité de la div .villas-contenu au survol */
+.marrakech-see .slider .slide:hover .villas-contenu {
+  opacity: 1;
+}
+
+/* Ajustez l'espacement entre les éléments .icons */
+.marrakech-see .slider .slide .villas-contenu .icons {
+  margin-top: 5%; /* Espacement vers le haut */
+}
+
+/* Style pour les éléments dans la div .icons */
+.marrakech-see .slider .slide .villas-contenu .icons div img {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+}
+
+/* Style spécifique pour les éléments de texte dans la div .icons */
+.marrakech-see .slider .slide .villas-contenu .icons span {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+  margin-bottom: 5%;
+  font-size: 24px;
+}
+
+.nottingham-m {
+  margin-top: 5%;
+  background-image: url("/images/suits-nottingham/nott12.webp");
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  width: 80%;
+  padding: 48px 32px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  background-repeat: no-repeat;
+}
+
+/* Styles d'animation pour .house-m */
+.nottingham-m.fade-in {
+  opacity: 1;
+  /* L'opacité devient 1 pour montrer l'élément */
+  transform: translateY(0);
+  /* Retour à la position d'origine */
+}
+
+/* Style d'animation pour la section .house-m */
+.nottingham-m.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nottingham-titre,
+.nottingham-gallery {
+  margin: auto;
+  width: 85%;
+  display: flex;
+  padding: 48px 32px;
+}
+
+.nottingham-titre .left {
+  width: 33.333%;
+}
+
+.nottingham-titre .center {
+  width: 50%;
+  margin-top: -3%;
+}
+
+.nottingham-titre .right {
+  width: 16.333%;
+}
+
+.nottingham-titre .left {
+  padding: 10px;
+  align-content: center;
+  align-items: center;
+}
+
+.nottingham-titre .center {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+}
+
+.axe {
+  padding: 10px 10px 10px 10px;
+  width: 33.333%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.axe img {
+  color: #00b7ff;
+  width: 85px;
+  margin-bottom: 5%;
+}
+
+.axe span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.tokyo-titre .right {
+  padding: 10px;
+  text-align: right;
+}
+
+.nottingham-titre .right a {
+  display: inline-block;
+  line-height: 1;
+  background-color: #818a91;
+  font-size: 15px;
+  padding: 12px 24px;
+  border-radius: 3px;
+  color: #fff;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.nottingham-description {
+  padding: 48px 32px;
+  /*  padding: 100px 0px 100px 0px;*/
+  margin: auto;
+  width: 85%;
+  display: flex;
+}
+
+.nottingham-description .left,
+.nottingham-description .center,
+.nottingham-description .right {
+  width: 33.333%;
+}
+
+.nottingham-description .left,
+.nottingham-description .center,
+.nottingham-description .right {
+  padding: 32px 25px 25px 25px;
+}
+
+.nottingham-description .left h1 {
+  margin-left: -3%;
+}
+
+.nottingham-description .center h1 {
+  text-align: start;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+}
+
+.nottingham-description .center p {
+  line-height: 29px;
+  text-align: left;
+}
+
+.nottingham-description .right .bottom {
+  margin-bottom: 15px;
+}
+
+.nottingham-description .right p {
+  line-height: 29px;
+  text-align: right;
+}
+
+.nottingham-gallery h2 {
+  width: 25%;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.nottingham-gallery img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nottingham-gallery img:hover {
+  transform: scale(1.05);
+  /* Augmente la taille de l'image au survol */
+}
+
+.nottingham-gallery .grid-wrapper {
+  display: grid;
+  width: 75%;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.nottingham-gallery .grid-wrapper .wide {
+  grid-column: span 2;
+}
+
+.nottingham-gallery .grid-wrapper .tall {
+  grid-row: span 2;
+}
+
+.nottingham-gallery .grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.nottingham-gallery .grid-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nottingham-gallery .grid-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.nottingham-see {
+  padding: 48px 32px;
+  margin: auto;
+  width: 85%;
+}
+
+/* Conteneur principal du carrousel */
+.nottingham-see .slider {
+  height: 100%;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Pseudo-éléments pour créer un dégradé sur les côtés du carrousel */
+.nottingham-see .slider::before,
+.nottingham-see .slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15px; /* Largeur des dégradés (ajustez selon vos préférences) */
+  height: 100%;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
+
+.nottingham-see .slider::before {
+  left: 0;
+  top: 0;
+}
+
+.nottingham-see .slider::after {
+  right: 0;
+  top: 0;
+}
+
+.slider-track {
+  display: flex;
+  margin-top: 10%;
+  /*  width: 4500px;*/
+  /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  animation: miamih 40s linear infinite;
+}
+
+@keyframes miamih {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-4500px);
+    /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  }
+}
+/* Conteneur pour les diapositives (slides) */
+.nottingham-see .slider .slide {
+  width: 650px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  perspective: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transitions pour l'effet de zoom et les ombres */
+  margin: 20px; /* Marge entre les diapositives (ajustez selon vos préférences) */
+}
+
+/* Effet de zoom au survol */
+.nottingham-see .slider .slide:hover {
+  transform: scale(1.05); /* Effet de zoom au survol */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Ombre douce au survol */
+  filter: brightness(1.2); /* Luminosité accrue au survol */
+}
+
+/* Style de l'image à l'intérieur de la diapositive */
+.nottingham-see .slider .slide a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* CSS pour arrêter l'animation de défilement (si nécessaire)*/
+.stop-scrolling {
+  animation-play-state: paused !important;
+}
+
+.nottingham-see .slider .slide .villas-contenu {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+/* Style du texte dans la div .villas-contenu */
+.nottingham-see .slider .slide .villas-contenu .text p a, .miami-see .slider .slide .villas-contenu .text span a {
+  font-size: 20px; /* Taille de police (ajustez selon vos préférences) */
+  color: rgb(0, 195, 255); /* Couleur du texte (ajustez selon vos préférences) */
+  margin: 0;
+  padding: 10px;
+  margin-bottom: 2%;
+  line-height: 5px;
+  font-size: 34px;
+  transition: opacity 0.3s ease; /* Transition pour l'opacité du texte */
+}
+
+.nottingham-see .slider .slide .villas-contenu .text {
+  margin-left: -2%;
+  font-size: 21px;
+}
+
+.nottingham-see .slider .slide .villas-contenu .text span a {
+  margin-bottom: 3%;
+  margin-top: 1%;
+  font-size: 24px;
+}
+
+/* Ajustez l'opacité de la div .villas-contenu au survol */
+.nottingham-see .slider .slide:hover .villas-contenu {
+  opacity: 1;
+}
+
+/* Ajustez l'espacement entre les éléments .icons */
+.nottingham-see .slider .slide .villas-contenu .icons {
+  margin-top: 5%; /* Espacement vers le haut */
+}
+
+/* Style pour les éléments dans la div .icons */
+.nottingham-see .slider .slide .villas-contenu .icons div img {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+}
+
+/* Style spécifique pour les éléments de texte dans la div .icons */
+.nottingham-see .slider .slide .villas-contenu .icons span {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+  margin-bottom: 5%;
+  font-size: 24px;
+}
+
+.phuket-m {
+  margin-top: 5%;
+  background-image: url("/images/suits-phuket/phuket11.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  width: 80%;
+  padding: 48px 32px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  background-repeat: no-repeat;
+}
+
+/* Styles d'animation pour .house-m */
+.phuket-m.fade-in {
+  opacity: 1;
+  /* L'opacité devient 1 pour montrer l'élément */
+  transform: translateY(0);
+  /* Retour à la position d'origine */
+}
+
+/* Style d'animation pour la section .house-m */
+.phuket-m.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.phuket-titre,
+.phuket-gallery {
+  margin: auto;
+  width: 85%;
+  display: flex;
+  padding: 48px 32px;
+}
+
+.phuket-titre .left {
+  width: 33.333%;
+}
+
+.phuket-titre .center {
+  width: 50%;
+  margin-top: -3%;
+}
+
+.phuket-titre .right {
+  width: 16.333%;
+}
+
+.phuket-titre .left {
+  padding: 10px;
+  align-content: center;
+  align-items: center;
+}
+
+.phuket-titre .center {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+}
+
+.axe {
+  padding: 10px 10px 10px 10px;
+  width: 33.333%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.axe img {
+  color: #00b7ff;
+  width: 85px;
+  margin-bottom: 5%;
+}
+
+.axe span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.phuket-titre .right {
+  padding: 10px;
+  text-align: right;
+}
+
+.phuket-titre .right a {
+  display: inline-block;
+  line-height: 1;
+  background-color: #818a91;
+  font-size: 15px;
+  padding: 12px 24px;
+  border-radius: 3px;
+  color: #fff;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.phuket-description {
+  padding: 48px 32px;
+  /*  padding: 100px 0px 100px 0px;*/
+  margin: auto;
+  width: 85%;
+  display: flex;
+}
+
+.phuket-description .left,
+.phuket-description .center,
+.phuket-description .right {
+  width: 33.333%;
+}
+
+.phuket-description .left,
+.phuket-description .center,
+.phuket-description .right {
+  padding: 32px 25px 25px 25px;
+}
+
+.phuket-description .left h1 {
+  margin-left: -3%;
+}
+
+.phuket-description .center h1 {
+  text-align: start;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+}
+
+.phuket-description .center p {
+  line-height: 29px;
+  text-align: left;
+}
+
+.phuket-description .right .bottom {
+  margin-bottom: 15px;
+}
+
+.phuket-description .right p {
+  line-height: 29px;
+  text-align: right;
+}
+
+.phuket-gallery h2 {
+  width: 25%;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.phuket-gallery img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.phuket-gallery img:hover {
+  transform: scale(1.05);
+  /* Augmente la taille de l'image au survol */
+}
+
+.phuket-gallery .grid-wrapper {
+  display: grid;
+  width: 75%;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.phuket-gallery .grid-wrapper .wide {
+  grid-column: span 2;
+}
+
+.phuket-gallery .grid-wrapper .tall {
+  grid-row: span 2;
+}
+
+.phuket-gallery .grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.phuket-gallery .grid-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phuket-gallery .grid-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.phuket-see {
+  padding: 48px 32px;
+  margin: auto;
+  width: 85%;
+}
+
+/* Conteneur principal du carrousel */
+.phuket-see .slider {
+  height: 100%;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Pseudo-éléments pour créer un dégradé sur les côtés du carrousel */
+.phuket-see .slider::before,
+.phuket-see .slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15px; /* Largeur des dégradés (ajustez selon vos préférences) */
+  height: 100%;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
+
+.phuket-see .slider::before {
+  left: 0;
+  top: 0;
+}
+
+.phuket-see .slider::after {
+  right: 0;
+  top: 0;
+}
+
+.phuket-track {
+  display: flex;
+  margin-top: 10%;
+  /*  width: 4500px;*/
+  /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  animation: miamih 40s linear infinite;
+}
+
+@keyframes miamih {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-4500px);
+    /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  }
+}
+/* Conteneur pour les diapositives (slides) */
+.phuket-see .slider .slide {
+  width: 650px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  perspective: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transitions pour l'effet de zoom et les ombres */
+  margin: 20px; /* Marge entre les diapositives (ajustez selon vos préférences) */
+}
+
+/* Effet de zoom au survol */
+.phuket-see .slider .slide:hover {
+  transform: scale(1.05); /* Effet de zoom au survol */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Ombre douce au survol */
+  filter: brightness(1.2); /* Luminosité accrue au survol */
+}
+
+/* Style de l'image à l'intérieur de la diapositive */
+.phuket-see .slider .slide a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* CSS pour arrêter l'animation de défilement (si nécessaire)*/
+.stop-scrolling {
+  animation-play-state: paused !important;
+}
+
+.phuket-see .slider .slide .villas-contenu {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+/* Style du texte dans la div .villas-contenu */
+.phuket-see .slider .slide .villas-contenu .text p a, .miami-see .slider .slide .villas-contenu .text span a {
+  font-size: 20px; /* Taille de police (ajustez selon vos préférences) */
+  color: rgb(0, 195, 255); /* Couleur du texte (ajustez selon vos préférences) */
+  margin: 0;
+  padding: 10px;
+  margin-bottom: 2%;
+  line-height: 5px;
+  font-size: 34px;
+  transition: opacity 0.3s ease; /* Transition pour l'opacité du texte */
+}
+
+.phuket-see .slider .slide .villas-contenu .text {
+  margin-left: -2%;
+  font-size: 21px;
+}
+
+.phuket-see .slider .slide .villas-contenu .text span a {
+  margin-bottom: 3%;
+  margin-top: 1%;
+  font-size: 24px;
+}
+
+/* Ajustez l'opacité de la div .villas-contenu au survol */
+.phuket-see .slider .slide:hover .villas-contenu {
+  opacity: 1;
+}
+
+/* Ajustez l'espacement entre les éléments .icons */
+.phuket-see .slider .slide .villas-contenu .icons {
+  margin-top: 5%; /* Espacement vers le haut */
+}
+
+/* Style pour les éléments dans la div .icons */
+.phuket-see .slider .slide .villas-contenu .icons div img {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+}
+
+/* Style spécifique pour les éléments de texte dans la div .icons */
+.phuket-see .slider .slide .villas-contenu .icons span {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+  margin-bottom: 5%;
+  font-size: 24px;
+}
+
+.tokyo-m {
+  margin-top: 5%;
+  background-image: url("/images/suits-tokyo/tokyo8.webp");
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  width: 80%;
+  padding: 48px 32px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  background-repeat: no-repeat;
+}
+
+/* Styles d'animation pour .house-m */
+.tokyo-m.fade-in {
+  opacity: 1;
+  /* L'opacité devient 1 pour montrer l'élément */
+  transform: translateY(0);
+  /* Retour à la position d'origine */
+}
+
+/* Style d'animation pour la section .house-m */
+.tokyo-m.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tokyo-titre,
+.tokyo-gallery {
+  margin: auto;
+  width: 85%;
+  display: flex;
+  padding: 48px 32px;
+}
+
+.tokyo-titre .left {
+  width: 33.333%;
+}
+
+.tokyo-titre .center {
+  width: 50%;
+  margin-top: -3%;
+}
+
+.tokyo-titre .right {
+  width: 16.333%;
+}
+
+.tokyo-titre .left {
+  padding: 10px;
+  align-content: center;
+  align-items: center;
+}
+
+.tokyo-titre .center {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+}
+
+.axe {
+  padding: 10px 10px 10px 10px;
+  width: 33.333%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.axe img {
+  color: #00b7ff;
+  width: 85px;
+  margin-bottom: 5%;
+}
+
+.axe span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.tokyo-titre .right {
+  padding: 10px;
+  text-align: right;
+}
+
+.tokyo-titre .right a {
+  display: inline-block;
+  line-height: 1;
+  background-color: #818a91;
+  font-size: 15px;
+  padding: 12px 24px;
+  border-radius: 3px;
+  color: #fff;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.tokyo-description {
+  padding: 48px 32px;
+  /*  padding: 100px 0px 100px 0px;*/
+  margin: auto;
+  width: 85%;
+  display: flex;
+}
+
+.tokyo-description .left,
+.tokyo-description .center,
+.tokyo-description .right {
+  width: 33.333%;
+}
+
+.tokyo-description .left,
+.tokyo-description .center,
+.tokyo-description .right {
+  padding: 32px 25px 25px 25px;
+}
+
+.tokyo-description .left h1 {
+  margin-left: -3%;
+}
+
+.tokyo-description .center h1 {
+  text-align: start;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+}
+
+.tokyo-description .center p {
+  line-height: 29px;
+  text-align: left;
+}
+
+.tokyo-description .right .bottom {
+  margin-bottom: 15px;
+}
+
+.tokyo-description .right p {
+  line-height: 29px;
+  text-align: right;
+}
+
+.tokyo-gallery h2 {
+  width: 25%;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.tokyo-gallery img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.tokyo-gallery img:hover {
+  transform: scale(1.05);
+  /* Augmente la taille de l'image au survol */
+}
+
+.tokyo-gallery .grid-wrapper {
+  display: grid;
+  width: 75%;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.tokyo-gallery .grid-wrapper .wide {
+  grid-column: span 2;
+}
+
+.tokyo-gallery .grid-wrapper .tall {
+  grid-row: span 2;
+}
+
+.tokyo-gallery .grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.tokyo-gallery .grid-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tokyo-gallery .grid-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.tokyo-see {
+  padding: 48px 32px;
+  margin: auto;
+  width: 85%;
+}
+
+/* Conteneur principal du carrousel */
+.tokyo-see .slider {
+  height: 100%;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Pseudo-éléments pour créer un dégradé sur les côtés du carrousel */
+.tokyo-see .slider::before,
+.tokyo-see .slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15px; /* Largeur des dégradés (ajustez selon vos préférences) */
+  height: 100%;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
+
+.tokyo-see .slider::before {
+  left: 0;
+  top: 0;
+}
+
+.tokyo-see .slider::after {
+  right: 0;
+  top: 0;
+}
+
+.slider-track {
+  display: flex;
+  margin-top: 10%;
+  /*  width: 4500px;*/
+  /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  animation: miamih 40s linear infinite;
+}
+
+@keyframes miamih {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-4500px);
+    /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  }
+}
+/* Conteneur pour les diapositives (slides) */
+.tokyo-see .slider .slide {
+  width: 650px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  perspective: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transitions pour l'effet de zoom et les ombres */
+  margin: 20px; /* Marge entre les diapositives (ajustez selon vos préférences) */
+}
+
+/* Effet de zoom au survol */
+.tokyo-see .slider .slide:hover {
+  transform: scale(1.05); /* Effet de zoom au survol */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Ombre douce au survol */
+  filter: brightness(1.2); /* Luminosité accrue au survol */
+}
+
+/* Style de l'image à l'intérieur de la diapositive */
+.tokyo-see .slider .slide a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* CSS pour arrêter l'animation de défilement (si nécessaire)*/
+.stop-scrolling {
+  animation-play-state: paused !important;
+}
+
+.tokyo-see .slider .slide .villas-contenu {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+/* Style du texte dans la div .villas-contenu */
+.tokyo-see .slider .slide .villas-contenu .text p a, .miami-see .slider .slide .villas-contenu .text span a {
+  font-size: 20px; /* Taille de police (ajustez selon vos préférences) */
+  color: rgb(0, 195, 255); /* Couleur du texte (ajustez selon vos préférences) */
+  margin: 0;
+  padding: 10px;
+  margin-bottom: 2%;
+  line-height: 5px;
+  font-size: 34px;
+  transition: opacity 0.3s ease; /* Transition pour l'opacité du texte */
+}
+
+.tokyo-see .slider .slide .villas-contenu .text {
+  margin-left: -2%;
+  font-size: 21px;
+}
+
+.tokyo-see .slider .slide .villas-contenu .text span a {
+  margin-bottom: 3%;
+  margin-top: 1%;
+  font-size: 24px;
+}
+
+/* Ajustez l'opacité de la div .villas-contenu au survol */
+.tokyo-see .slider .slide:hover .villas-contenu {
+  opacity: 1;
+}
+
+/* Ajustez l'espacement entre les éléments .icons */
+.tokyo-see .slider .slide .villas-contenu .icons {
+  margin-top: 5%; /* Espacement vers le haut */
+}
+
+/* Style pour les éléments dans la div .icons */
+.tokyo-see .slider .slide .villas-contenu .icons div img {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+}
+
+/* Style spécifique pour les éléments de texte dans la div .icons */
+.tokyo-see .slider .slide .villas-contenu .icons span {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+  margin-bottom: 5%;
+  font-size: 24px;
+}
+
+.house-m {
+  margin-top: 5%;
+  background-image: url("/images/miami-pis-vdh.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  width: 80%;
+  padding: 48px 32px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  background-repeat: no-repeat;
+}
+
+/* Styles d'animation pour .house-m */
+.house-m.fade-in {
+  opacity: 1;
+  /* L'opacité devient 1 pour montrer l'élément */
+  transform: translateY(0);
+  /* Retour à la position d'origine */
+}
+
+/* Style d'animation pour la section .house-m */
+.house-m.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.miami-titre,
+.miami-gallery {
+  margin: auto;
+  width: 85%;
+  display: flex;
+  padding: 48px 32px;
+}
+
+.miami-titre .left {
+  width: 33.333%;
+}
+
+.miami-titre .center {
+  width: 50%;
+  margin-top: -3%;
+}
+
+.miami-titre .right {
+  width: 16.333%;
+}
+
+.miami-titre .left {
+  padding: 10px;
+  align-content: center;
+  align-items: center;
+}
+
+.miami-titre .center {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+}
+
+.axe {
+  padding: 10px 10px 10px 10px;
+  width: 33.333%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.axe img {
+  color: #00b7ff;
+  width: 85px;
+  margin-bottom: 5%;
+}
+
+.axe span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.miami-titre .right {
+  padding: 10px;
+  text-align: right;
+}
+
+.miami-titre .right a {
+  display: inline-block;
+  background-color: #009688;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px 50px 50px 50px;
+  transition: background-color 0.3s ease;
+}
+
+.miami-titre .right a:hover {
+  background-color: #00796B;
+}
+
+.miami-description {
+  padding: 48px 32px;
+  /*  padding: 100px 0px 100px 0px;*/
+  margin: auto;
+  width: 85%;
+  display: flex;
+}
+
+.miami-description .left,
+.miami-description .center,
+.miami-description .right {
+  width: 33.333%;
+}
+
+.miami-description .left,
+.miami-description .center,
+.miami-description .right {
+  padding: 32px 25px 25px 25px;
+}
+
+.miami-description .left h1 {
+  margin-left: -3%;
+}
+
+.miami-description .center h1 {
+  text-align: start;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+}
+
+.miami-description .center p {
+  line-height: 29px;
+  text-align: left;
+}
+
+.miami-description .right .bottom {
+  margin-bottom: 15px;
+}
+
+.miami-description .right p {
+  line-height: 29px;
+  text-align: right;
+}
+
+.miami-gallery h2 {
+  width: 25%;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.miami-gallery img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.miami-gallery img:hover {
+  transform: scale(1.05);
+  /* Augmente la taille de l'image au survol */
+}
+
+.miami-gallery .grid-wrapper {
+  display: grid;
+  width: 75%;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.miami-gallery .grid-wrapper .wide {
+  grid-column: span 2;
+}
+
+.miami-gallery .grid-wrapper .tall {
+  grid-row: span 2;
+}
+
+.miami-gallery .grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.miami-gallery .grid-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.miami-gallery .grid-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.miami-see {
+  padding: 48px 32px;
+  margin: auto;
+  width: 85%;
+}
+
+/* Conteneur principal du carrousel */
+.miami-see .slider {
+  height: 100%;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Pseudo-éléments pour créer un dégradé sur les côtés du carrousel */
+.miami-see .slider::before,
+.miami-see .slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15px; /* Largeur des dégradés (ajustez selon vos préférences) */
+  height: 100%;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
+
+.miami-see .slider::before {
+  left: 0;
+  top: 0;
+}
+
+.miami-see .slider::after {
+  right: 0;
+  top: 0;
+}
+
+.slider-track {
+  display: flex;
+  margin-top: 10%;
+  /*  width: 4500px;*/
+  /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  animation: miamih 40s linear infinite;
+}
+
+@keyframes miamih {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-4500px);
+    /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  }
+}
+/* Conteneur pour les diapositives (slides) */
+.miami-see .slider .slide {
+  height: 300px;
+  width: 650px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transitions pour l'effet de zoom et les ombres */
+  margin: 20px; /* Marge entre les diapositives (ajustez selon vos préférences) */
+}
+
+/* Effet de zoom au survol */
+.miami-see .slider .slide:hover {
+  transform: scale(1.05); /* Effet de zoom au survol */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Ombre douce au survol */
+  filter: brightness(1.2); /* Luminosité accrue au survol */
+}
+
+/* Style de l'image à l'intérieur de la diapositive */
+.miami-see .slider .slide a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* CSS pour arrêter l'animation de défilement (si nécessaire)*/
+.stop-scrolling {
+  animation-play-state: paused !important;
+}
+
+/* Style pour la div .villas-contenu */
+.miami-see .slider .slide .villas-contenu {
+  position: absolute;
+  top: 50%;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: transparent;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 24px;
+}
+
+/* Style du texte dans la div .villas-contenu */
+.miami-see .slider .slide .villas-contenu .text p a, .miami-see .slider .slide .villas-contenu .text span a {
+  font-size: 20px; /* Taille de police (ajustez selon vos préférences) */
+  color: rgb(0, 195, 255); /* Couleur du texte (ajustez selon vos préférences) */
+  margin: 0;
+  padding: 10px;
+  margin-bottom: 2%;
+  line-height: 5px;
+  font-size: 34px;
+  transition: opacity 0.3s ease; /* Transition pour l'opacité du texte */
+}
+
+.miami-see .slider .slide .villas-contenu .text span a {
+  margin-bottom: 3%;
+  margin-top: 1%;
+  font-size: 24px;
+}
+
+/* Ajustez l'opacité de la div .villas-contenu au survol */
+.miami-see .slider .slide:hover .villas-contenu {
+  opacity: 1;
+}
+
+/* Ajustez l'espacement entre les éléments .icons */
+.miami-see .slider .slide .villas-contenu .icons {
+  margin-top: 5%; /* Espacement vers le haut */
+}
+
+/* Style pour les éléments dans la div .icons */
+.miami-see .slider .slide .villas-contenu .icons div img {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+}
+
+/* Style spécifique pour les éléments de texte dans la div .icons */
+.miami-see .slider .slide .villas-contenu .icons span {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+  margin-bottom: 5%;
+  font-size: 24px;
+}
+
+.house-m {
+  margin-top: 5%;
+  /* background-image: url('images/villas.lagos/lagos10.jpg');*/
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  width: 80%;
+  padding: 48px 32px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  background-repeat: no-repeat;
+}
+
+/* Styles d'animation pour .house-m */
+.house-m.fade-in {
+  opacity: 1;
+  /* L'opacité devient 1 pour montrer l'élément */
+  transform: translateY(0);
+  /* Retour à la position d'origine */
+}
+
+/* Style d'animation pour la section .house-m */
+.house-m.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.lagos-titre,
+.lagos-gallery {
+  margin: auto;
+  width: 85%;
+  display: flex;
+  padding: 48px 32px;
+}
+
+.lagos-titre .left {
+  width: 33.333%;
+}
+
+.lagos-titre .center {
+  width: 50%;
+  margin-top: -3%;
+}
+
+.lagos-titre .right {
+  width: 16.333%;
+}
+
+.lagos-titre .left {
+  padding: 10px;
+  align-content: center;
+  align-items: center;
+}
+
+.lagos-titre .center {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+}
+
+.axe {
+  padding: 10px 10px 10px 10px;
+  width: 33.333%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.axe img {
+  color: #00b7ff;
+  width: 85px;
+  margin-bottom: 5%;
+}
+
+.axe span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.lagos-titre .right {
+  padding: 10px;
+  text-align: right;
+}
+
+.lagos-titre .right a {
+  display: inline-block;
+  background-color: #009688;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px 50px 50px 50px;
+  transition: background-color 0.3s ease;
+}
+
+.lagos-titre .right a:hover {
+  background-color: #00796B;
+}
+
+.lagos-description {
+  padding: 48px 32px;
+  /*  padding: 100px 0px 100px 0px;*/
+  margin: auto;
+  width: 85%;
+  display: flex;
+}
+
+.lagos-description .left,
+.lagos-description .center,
+.lagos-description .right {
+  width: 33.333%;
+}
+
+.lagos-description .left,
+.lagos-description .center,
+.lagos-description .right {
+  padding: 32px 25px 25px 25px;
+}
+
+.lagos-description .left h1 {
+  margin-left: -3%;
+}
+
+.lagos-description .center h1 {
+  text-align: start;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+}
+
+.lagos-description .center p {
+  line-height: 29px;
+  text-align: left;
+}
+
+.lagos-description .right .bottom {
+  margin-bottom: 15px;
+}
+
+.lagos-description .right p {
+  line-height: 29px;
+  text-align: right;
+}
+
+.lagos-gallery h2 {
+  width: 25%;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.lagos-gallery img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.lagos-gallery img:hover {
+  transform: scale(1.05);
+  /* Augmente la taille de l'image au survol */
+}
+
+.lagos-gallery .grid-wrapper {
+  display: grid;
+  width: 75%;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.lagos-gallery .grid-wrapper .wide {
+  grid-column: span 2;
+}
+
+.lagos-gallery .grid-wrapper .tall {
+  grid-row: span 2;
+}
+
+.lagos-gallery .grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.lagos-gallery .grid-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lagos-gallery .grid-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.lagos-see {
+  padding: 48px 32px;
+  margin: auto;
+  width: 85%;
+}
+
+/* Conteneur principal du carrousel */
+.lagos-see .slider {
+  height: 100%;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Pseudo-éléments pour créer un dégradé sur les côtés du carrousel */
+.lagos-see .slider::before,
+.lagos-see .slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15px; /* Largeur des dégradés (ajustez selon vos préférences) */
+  height: 100%;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
+
+.lagos-see .slider::before {
+  left: 0;
+  top: 0;
+}
+
+.lagos-see .slider::after {
+  right: 0;
+  top: 0;
+}
+
+.slider-track {
+  display: flex;
+  margin-top: 10%;
+  /*  width: 4500px;*/
+  /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  animation: miamih 40s linear infinite;
+}
+
+@keyframes miamih {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-4500px);
+    /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  }
+}
+/* Conteneur pour les diapositives (slides) */
+.lagos-see .slider .slide {
+  height: 300px;
+  width: 650px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transitions pour l'effet de zoom et les ombres */
+  margin: 20px; /* Marge entre les diapositives (ajustez selon vos préférences) */
+}
+
+/* Effet de zoom au survol */
+.lagos-see .slider .slide:hover {
+  transform: scale(1.05); /* Effet de zoom au survol */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Ombre douce au survol */
+  filter: brightness(1.2); /* Luminosité accrue au survol */
+}
+
+/* Style de l'image à l'intérieur de la diapositive */
+.lagos-see .slider .slide a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* CSS pour arrêter l'animation de défilement (si nécessaire)*/
+.stop-scrolling {
+  animation-play-state: paused !important;
+}
+
+/* Style pour la div .villas-contenu */
+.lagos-see .slider .slide .villas-contenu {
+  position: absolute;
+  top: 50%;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: transparent;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 24px;
+}
+
+/* Style du texte dans la div .villas-contenu */
+.lagos-see .slider .slide .villas-contenu .text p a, .miami-see .slider .slide .villas-contenu .text span a {
+  font-size: 20px; /* Taille de police (ajustez selon vos préférences) */
+  color: rgb(0, 195, 255); /* Couleur du texte (ajustez selon vos préférences) */
+  margin: 0;
+  padding: 10px;
+  margin-bottom: 2%;
+  line-height: 5px;
+  font-size: 34px;
+  transition: opacity 0.3s ease; /* Transition pour l'opacité du texte */
+}
+
+.lagos-see .slider .slide .villas-contenu .text span a {
+  margin-bottom: 3%;
+  margin-top: 1%;
+  font-size: 24px;
+}
+
+/* Ajustez l'opacité de la div .villas-contenu au survol */
+.lagos-see .slider .slide:hover .villas-contenu {
+  opacity: 1;
+}
+
+/* Ajustez l'espacement entre les éléments .icons */
+.lagos-see .slider .slide .villas-contenu .icons {
+  margin-top: 5%; /* Espacement vers le haut */
+}
+
+/* Style pour les éléments dans la div .icons */
+.lagos-see .slider .slide .villas-contenu .icons div img {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+}
+
+/* Style spécifique pour les éléments de texte dans la div .icons */
+.lagos-see .slider .slide .villas-contenu .icons span {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+  margin-bottom: 5%;
+  font-size: 24px;
+}
+
+.house-m {
+  margin-top: 5%;
+  background-image: url("/images/miami-pis-vdh.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  width: 80%;
+  padding: 48px 32px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  background-repeat: no-repeat;
+}
+
+/* Styles d'animation pour .house-m */
+.house-m.fade-in {
+  opacity: 1;
+  /* L'opacité devient 1 pour montrer l'élément */
+  transform: translateY(0);
+  /* Retour à la position d'origine */
+}
+
+/* Style d'animation pour la section .house-m */
+.house-m.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ottawa-titre,
+.ottawa-gallery {
+  margin: auto;
+  width: 85%;
+  display: flex;
+  padding: 48px 32px;
+}
+
+.ottawa-titre .left {
+  width: 33.333%;
+}
+
+.ottawa-titre .center {
+  width: 50%;
+  margin-top: -3%;
+}
+
+.ottawa-titre .right {
+  width: 16.333%;
+}
+
+.ottawa-titre .left {
+  padding: 10px;
+  align-content: center;
+  align-items: center;
+}
+
+.ottawa-titre .center {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+}
+
+.axe {
+  padding: 10px 10px 10px 10px;
+  width: 33.333%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.axe img {
+  color: #00b7ff;
+  width: 85px;
+  margin-bottom: 5%;
+}
+
+.axe span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.ottawa-titre .right {
+  padding: 10px;
+  text-align: right;
+}
+
+.ottawa-titre .right a {
+  display: inline-block;
+  background-color: #009688;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px 50px 50px 50px;
+  transition: background-color 0.3s ease;
+}
+
+.ottawa-titre .right a:hover {
+  background-color: #00796B;
+}
+
+.ottawa-description {
+  padding: 48px 32px;
+  /*  padding: 100px 0px 100px 0px;*/
+  margin: auto;
+  width: 85%;
+  display: flex;
+}
+
+.ottawa-description .left,
+.ottawa-description .center,
+.ottawa-description .right {
+  width: 33.333%;
+}
+
+.ottawa-description .left,
+.ottawa-description .center,
+.ottawa-description .right {
+  padding: 32px 25px 25px 25px;
+}
+
+.ottawa-description .left h1 {
+  margin-left: -3%;
+}
+
+.ottawa-description .center h1 {
+  text-align: start;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+}
+
+.ottawa-description .center p {
+  line-height: 29px;
+  text-align: left;
+}
+
+.ottawa-description .right .bottom {
+  margin-bottom: 15px;
+}
+
+.ottawa-description .right p {
+  line-height: 29px;
+  text-align: right;
+}
+
+.ottawa-gallery h2 {
+  width: 25%;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.ottawa-gallery img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.ottawa-gallery img:hover {
+  transform: scale(1.05);
+  /* Augmente la taille de l'image au survol */
+}
+
+.ottawa-gallery .grid-wrapper {
+  display: grid;
+  width: 75%;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.ottawa-gallery .grid-wrapper .wide {
+  grid-column: span 2;
+}
+
+.ottawa-gallery .grid-wrapper .tall {
+  grid-row: span 2;
+}
+
+.ottawa-gallery .grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.ottawa-gallery .grid-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ottawa-gallery .grid-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.ottawa-see {
+  padding: 48px 32px;
+  margin: auto;
+  width: 85%;
+}
+
+/* Conteneur principal du carrousel */
+.ottawa-see .slider {
+  height: 100%;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Pseudo-éléments pour créer un dégradé sur les côtés du carrousel */
+.ottawa-see .slider::before,
+.ottawa-see .slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15px; /* Largeur des dégradés (ajustez selon vos préférences) */
+  height: 100%;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
+
+.ottawa-see .slider::before {
+  left: 0;
+  top: 0;
+}
+
+.ottawa-see .slider::after {
+  right: 0;
+  top: 0;
+}
+
+.slider-track {
+  display: flex;
+  margin-top: 10%;
+  /*  width: 4500px;*/
+  /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  animation: miamih 40s linear infinite;
+}
+
+@keyframes miamih {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-4500px);
+    /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  }
+}
+/* Conteneur pour les diapositives (slides) */
+.ottawa-see .slider .slide {
+  height: 300px;
+  width: 650px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transitions pour l'effet de zoom et les ombres */
+  margin: 20px; /* Marge entre les diapositives (ajustez selon vos préférences) */
+}
+
+/* Effet de zoom au survol */
+.ottawa-see .slider .slide:hover {
+  transform: scale(1.05); /* Effet de zoom au survol */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Ombre douce au survol */
+  filter: brightness(1.2); /* Luminosité accrue au survol */
+}
+
+/* Style de l'image à l'intérieur de la diapositive */
+.ottawa-see .slider .slide a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* CSS pour arrêter l'animation de défilement (si nécessaire)*/
+.stop-scrolling {
+  animation-play-state: paused !important;
+}
+
+/* Style pour la div .villas-contenu */
+.ottawa-see .slider .slide .villas-contenu {
+  position: absolute;
+  top: 50%;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: transparent;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 24px;
+}
+
+/* Style du texte dans la div .villas-contenu */
+.ottawa-see .slider .slide .villas-contenu .text p a, .miami-see .slider .slide .villas-contenu .text span a {
+  font-size: 20px; /* Taille de police (ajustez selon vos préférences) */
+  color: rgb(0, 195, 255); /* Couleur du texte (ajustez selon vos préférences) */
+  margin: 0;
+  padding: 10px;
+  margin-bottom: 2%;
+  line-height: 5px;
+  font-size: 34px;
+  transition: opacity 0.3s ease; /* Transition pour l'opacité du texte */
+}
+
+.ottawa-see .slider .slide .villas-contenu .text span a {
+  margin-bottom: 3%;
+  margin-top: 1%;
+  font-size: 24px;
+}
+
+/* Ajustez l'opacité de la div .villas-contenu au survol */
+.ottawa-see .slider .slide:hover .villas-contenu {
+  opacity: 1;
+}
+
+/* Ajustez l'espacement entre les éléments .icons */
+.ottawa-see .slider .slide .villas-contenu .icons {
+  margin-top: 5%; /* Espacement vers le haut */
+}
+
+/* Style pour les éléments dans la div .icons */
+.ottawa-see .slider .slide .villas-contenu .icons div img {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+}
+
+/* Style spécifique pour les éléments de texte dans la div .icons */
+.ottawa-see .slider .slide .villas-contenu .icons span {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+  margin-bottom: 5%;
+  font-size: 24px;
+}
+
+.house-m {
+  margin-top: 5%;
+  background-image: url("/images/cannes-pis-vdh.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  width: 80%;
+  padding: 48px 32px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  background-repeat: no-repeat;
+}
+
+/* Styles d'animation pour .house-m */
+.house-m.fade-in {
+  opacity: 1;
+  /* L'opacité devient 1 pour montrer l'élément */
+  transform: translateY(0);
+  /* Retour à la position d'origine */
+}
+
+/* Style d'animation pour la section .house-m */
+.house-m.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cannes-titre,
+.cannes-gallery {
+  margin: auto;
+  width: 85%;
+  display: flex;
+  padding: 48px 32px;
+}
+
+.cannes-titre .left {
+  width: 33.333%;
+}
+
+.cannes-titre .center {
+  width: 50%;
+  margin-top: -3%;
+}
+
+.cannes-titre .right {
+  width: 16.333%;
+}
+
+.cannes-titre .left {
+  padding: 10px;
+  align-content: center;
+  align-items: center;
+}
+
+.cannes-titre .center {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+}
+
+.axe {
+  padding: 10px 10px 10px 10px;
+  width: 33.333%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.axe img {
+  color: #00b7ff;
+  width: 85px;
+  margin-bottom: 5%;
+}
+
+.axe span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.cannes-titre .right {
+  padding: 10px;
+  text-align: right;
+}
+
+.cannes-titre .right a {
+  display: inline-block;
+  background-color: #009688;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px 50px 50px 50px;
+  transition: background-color 0.3s ease;
+}
+
+.cannes-titre .right a:hover {
+  background-color: #00796B;
+}
+
+.cannes-description {
+  padding: 48px 32px;
+  /*  padding: 100px 0px 100px 0px;*/
+  margin: auto;
+  width: 85%;
+  display: flex;
+}
+
+.cannes-description .left,
+.cannes-description .center,
+.cannes-description .right {
+  width: 33.333%;
+}
+
+.cannes-description .left,
+.cannes-description .center,
+.cannes-description .right {
+  padding: 32px 25px 25px 25px;
+}
+
+.cannes-description .left h1 {
+  margin-left: -3%;
+}
+
+.cannes-description .center h1 {
+  text-align: start;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+}
+
+.cannes-description .center p {
+  line-height: 29px;
+  text-align: left;
+}
+
+.cannes-description .right .bottom {
+  margin-bottom: 15px;
+}
+
+.cannes-description .right p {
+  line-height: 29px;
+  text-align: right;
+}
+
+.cannes-gallery h2 {
+  width: 25%;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.cannes-gallery img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cannes-gallery img:hover {
+  transform: scale(1.05);
+  /* Augmente la taille de l'image au survol */
+}
+
+.cannes-gallery .grid-wrapper {
+  display: grid;
+  width: 75%;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.cannes-gallery .grid-wrapper .wide {
+  grid-column: span 2;
+}
+
+.cannes-gallery .grid-wrapper .tall {
+  grid-row: span 2;
+}
+
+.cannes-gallery .grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.cannes-gallery .grid-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cannes-gallery .grid-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.cannes-see {
+  padding: 48px 32px;
+  margin: auto;
+  width: 85%;
+}
+
+/* Conteneur principal du carrousel */
+.cannes-see .slider {
+  height: 100%;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Pseudo-éléments pour créer un dégradé sur les côtés du carrousel */
+.cannes-see .slider::before,
+.cannes-see .slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15px; /* Largeur des dégradés (ajustez selon vos préférences) */
+  height: 100%;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
+
+.cannes-see .slider::before {
+  left: 0;
+  top: 0;
+}
+
+.cannes-see .slider::after {
+  right: 0;
+  top: 0;
+}
+
+.slider-track {
+  display: flex;
+  margin-top: 10%;
+  /*  width: 4500px;*/
+  /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  animation: cannesh 40s linear infinite;
+}
+
+@keyframes cannesh {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-4500px);
+    /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  }
+}
+/* Conteneur pour les diapositives (slides) */
+.cannes-see .slider .slide {
+  height: 300px;
+  width: 650px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transitions pour l'effet de zoom et les ombres */
+  margin: 20px; /* Marge entre les diapositives (ajustez selon vos préférences) */
+}
+
+/* Effet de zoom au survol */
+.cannes-see .slider .slide:hover {
+  transform: scale(1.05); /* Effet de zoom au survol */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Ombre douce au survol */
+  filter: brightness(1.2); /* Luminosité accrue au survol */
+}
+
+/* Style de l'image à l'intérieur de la diapositive */
+.cannes-see .slider .slide a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* CSS pour arrêter l'animation de défilement (si nécessaire)*/
+.stop-scrolling {
+  animation-play-state: paused !important;
+}
+
+/* Style pour la div .villas-contenu */
+.cannes-see .slider .slide .villas-contenu {
+  position: absolute;
+  top: 50%;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: transparent;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 24px;
+}
+
+/* Style du texte dans la div .villas-contenu */
+.cannes-see .slider .slide .villas-contenu .text p a, .cannes-see .slider .slide .villas-contenu .text span a {
+  font-size: 20px; /* Taille de police (ajustez selon vos préférences) */
+  color: rgb(0, 195, 255); /* Couleur du texte (ajustez selon vos préférences) */
+  margin: 0;
+  padding: 10px;
+  margin-bottom: 2%;
+  line-height: 5px;
+  font-size: 34px;
+  transition: opacity 0.3s ease; /* Transition pour l'opacité du texte */
+}
+
+.cannes-see .slider .slide .villas-contenu .text span a {
+  margin-bottom: 3%;
+  margin-top: 1%;
+  font-size: 24px;
+}
+
+/* Ajustez l'opacité de la div .villas-contenu au survol */
+.cannes-see .slider .slide:hover .villas-contenu {
+  opacity: 1;
+}
+
+/* Ajustez l'espacement entre les éléments .icons */
+.cannes-see .slider .slide .villas-contenu .icons {
+  margin-top: 5%; /* Espacement vers le haut */
+}
+
+/* Style pour les éléments dans la div .icons */
+.cannes-see .slider .slide .villas-contenu .icons div img {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+}
+
+/* Style spécifique pour les éléments de texte dans la div .icons */
+.cannes-see .slider .slide .villas-contenu .icons span {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+  margin-bottom: 5%;
+  font-size: 24px;
+}
+
+.house-m {
+  margin-top: 5%;
+  background-image: url("/images/madrid-pis-vdh.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  width: 80%;
+  padding: 48px 32px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  background-repeat: no-repeat;
+}
+
+/* Styles d'animation pour .house-m */
+.house-m.fade-in {
+  opacity: 1;
+  /* L'opacité devient 1 pour montrer l'élément */
+  transform: translateY(0);
+  /* Retour à la position d'origine */
+}
+
+/* Style d'animation pour la section .house-m */
+.house-m.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.madrid-titre,
+.madrid-gallery {
+  margin: auto;
+  width: 85%;
+  display: flex;
+  padding: 48px 32px;
+}
+
+.madrid-titre .left {
+  width: 33.333%;
+}
+
+.madrid-titre .center {
+  width: 50%;
+  margin-top: -3%;
+}
+
+.madrid-titre .right {
+  width: 16.333%;
+}
+
+.madrid-titre .left {
+  padding: 10px;
+  align-content: center;
+  align-items: center;
+}
+
+.madrid-titre .center {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+}
+
+.axe {
+  padding: 10px 10px 10px 10px;
+  width: 33.333%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.axe img {
+  color: #00b7ff;
+  width: 85px;
+  margin-bottom: 5%;
+}
+
+.axe span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.madrid-titre .right {
+  padding: 10px;
+  text-align: right;
+}
+
+.madrid-titre .right a {
+  display: inline-block;
+  background-color: #009688;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px 50px 50px 50px;
+  transition: background-color 0.3s ease;
+}
+
+.madrid-titre .right a:hover {
+  background-color: #00796B;
+}
+
+.madrid-description {
+  padding: 48px 32px;
+  /*  padding: 100px 0px 100px 0px;*/
+  margin: auto;
+  width: 85%;
+  display: flex;
+}
+
+.madrid-description .left,
+.madrid-description .center,
+.madrid-description .right {
+  width: 33.333%;
+}
+
+.madrid-description .left,
+.madrid-description .center,
+.madrid-description .right {
+  padding: 32px 25px 25px 25px;
+}
+
+.madrid-description .left h1 {
+  margin-left: -3%;
+}
+
+.madrid-description .center h1 {
+  text-align: start;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+}
+
+.madrid-description .center p {
+  line-height: 29px;
+  text-align: left;
+}
+
+.madrid-description .right .bottom {
+  margin-bottom: 15px;
+}
+
+.madrid-description .right p {
+  line-height: 29px;
+  text-align: right;
+}
+
+.madrid-gallery h2 {
+  width: 25%;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.madrid-gallery img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.madrid-gallery img:hover {
+  transform: scale(1.05);
+  /* Augmente la taille de l'image au survol */
+}
+
+.madrid-gallery .grid-wrapper {
+  display: grid;
+  width: 75%;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.madrid-gallery .grid-wrapper .wide {
+  grid-column: span 2;
+}
+
+.madrid-gallery .grid-wrapper .tall {
+  grid-row: span 2;
+}
+
+.madrid-gallery .grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.madrid-gallery .grid-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.madrid-gallery .grid-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.madrid-see {
+  padding: 48px 32px;
+  margin: auto;
+  width: 85%;
+}
+
+/* Conteneur principal du carrousel */
+.madrid-see .slider {
+  height: 100%;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Pseudo-éléments pour créer un dégradé sur les côtés du carrousel */
+.madrid-see .slider::before,
+.madrid-see .slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15px; /* Largeur des dégradés (ajustez selon vos préférences) */
+  height: 100%;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
+
+.madrid-see .slider::before {
+  left: 0;
+  top: 0;
+}
+
+.madrid-see .slider::after {
+  right: 0;
+  top: 0;
+}
+
+.slider-track {
+  display: flex;
+  margin-top: 10%;
+  /*  width: 4500px;*/
+  /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  animation: madridh 40s linear infinite;
+}
+
+@keyframes madridh {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-4500px);
+    /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  }
+}
+/* Conteneur pour les diapositives (slides) */
+.madrid-see .slider .slide {
+  height: 300px;
+  width: 650px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transitions pour l'effet de zoom et les ombres */
+  margin: 20px; /* Marge entre les diapositives (ajustez selon vos préférences) */
+}
+
+/* Effet de zoom au survol */
+.madrid-see .slider .slide:hover {
+  transform: scale(1.05); /* Effet de zoom au survol */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Ombre douce au survol */
+  filter: brightness(1.2); /* Luminosité accrue au survol */
+}
+
+/* Style de l'image à l'intérieur de la diapositive */
+.madrid-see .slider .slide a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* CSS pour arrêter l'animation de défilement (si nécessaire)*/
+.stop-scrolling {
+  animation-play-state: paused !important;
+}
+
+/* Style pour la div .villas-contenu */
+.madrid-see .slider .slide .villas-contenu {
+  position: absolute;
+  top: 50%;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: transparent;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 24px;
+}
+
+/* Style du texte dans la div .villas-contenu */
+.madrid-see .slider .slide .villas-contenu .text p a, .madrid-see .slider .slide .villas-contenu .text span a {
+  font-size: 20px; /* Taille de police (ajustez selon vos préférences) */
+  color: rgb(0, 195, 255); /* Couleur du texte (ajustez selon vos préférences) */
+  margin: 0;
+  padding: 10px;
+  margin-bottom: 2%;
+  line-height: 5px;
+  font-size: 34px;
+  transition: opacity 0.3s ease; /* Transition pour l'opacité du texte */
+}
+
+.madrid-see .slider .slide .villas-contenu .text span a {
+  margin-bottom: 3%;
+  margin-top: 1%;
+  font-size: 24px;
+}
+
+/* Ajustez l'opacité de la div .villas-contenu au survol */
+.madrid-see .slider .slide:hover .villas-contenu {
+  opacity: 1;
+}
+
+/* Ajustez l'espacement entre les éléments .icons */
+.madrid-see .slider .slide .villas-contenu .icons {
+  margin-top: 5%; /* Espacement vers le haut */
+}
+
+/* Style pour les éléments dans la div .icons */
+.madrid-see .slider .slide .villas-contenu .icons div img {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+}
+
+/* Style spécifique pour les éléments de texte dans la div .icons */
+.madrid-see .slider .slide .villas-contenu .icons span {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+  margin-bottom: 5%;
+  font-size: 24px;
+}
+
+.house-m {
+  margin-top: 5%;
+  background-image: url("/images/hongkong-pis-vdh.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  width: 80%;
+  padding: 48px 32px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  background-repeat: no-repeat;
+}
+
+/* Styles d'animation pour .house-m */
+.house-m.fade-in {
+  opacity: 1;
+  /* L'opacité devient 1 pour montrer l'élément */
+  transform: translateY(0);
+  /* Retour à la position d'origine */
+}
+
+/* Style d'animation pour la section .house-m */
+.house-m.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hongkong-titre,
+.hongkong-gallery {
+  margin: auto;
+  width: 85%;
+  display: flex;
+  padding: 48px 32px;
+}
+
+.hongkong-titre .left {
+  width: 33.333%;
+}
+
+.hongkong-titre .center {
+  width: 50%;
+  margin-top: -3%;
+}
+
+.hongkong-titre .right {
+  width: 16.333%;
+}
+
+.hongkong-titre .left {
+  padding: 10px;
+  align-content: center;
+  align-items: center;
+}
+
+.hongkong-titre .center {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+}
+
+.axe {
+  padding: 10px 10px 10px 10px;
+  width: 33.333%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.axe img {
+  color: #00b7ff;
+  width: 85px;
+  margin-bottom: 5%;
+}
+
+.axe span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.hongkong-titre .right {
+  padding: 10px;
+  text-align: right;
+}
+
+.hongkong-titre .right a {
+  display: inline-block;
+  background-color: #009688;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px 50px 50px 50px;
+  transition: background-color 0.3s ease;
+}
+
+.hongkong-titre .right a:hover {
+  background-color: #00796B;
+}
+
+.hongkong-description {
+  padding: 48px 32px;
+  /*  padding: 100px 0px 100px 0px;*/
+  margin: auto;
+  width: 85%;
+  display: flex;
+}
+
+.hongkong-description .left,
+.hongkong-description .center,
+.hongkong-description .right {
+  width: 33.333%;
+}
+
+.hongkong-description .left,
+.hongkong-description .center,
+.hongkong-description .right {
+  padding: 32px 25px 25px 25px;
+}
+
+.hongkong-description .left h1 {
+  margin-left: -3%;
+}
+
+.hongkong-description .center h1 {
+  text-align: start;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+}
+
+.hongkong-description .center p {
+  line-height: 29px;
+  text-align: left;
+}
+
+.hongkong-description .right .bottom {
+  margin-bottom: 15px;
+}
+
+.hongkong-description .right p {
+  line-height: 29px;
+  text-align: right;
+}
+
+.hongkong-gallery h2 {
+  width: 25%;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.hongkong-gallery img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hongkong-gallery img:hover {
+  transform: scale(1.05);
+  /* Augmente la taille de l'image au survol */
+}
+
+.hongkong-gallery .grid-wrapper {
+  display: grid;
+  width: 75%;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.hongkong-gallery .grid-wrapper .wide {
+  grid-column: span 2;
+}
+
+.hongkong-gallery .grid-wrapper .tall {
+  grid-row: span 2;
+}
+
+.hongkong-gallery .grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.hongkong-gallery .grid-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hongkong-gallery .grid-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.hongkong-see {
+  padding: 48px 32px;
+  margin: auto;
+  width: 85%;
+}
+
+/* Conteneur principal du carrousel */
+.hongkong-see .slider {
+  height: 100%;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Pseudo-éléments pour créer un dégradé sur les côtés du carrousel */
+.hongkong-see .slider::before,
+.hongkong-see .slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15px; /* Largeur des dégradés (ajustez selon vos préférences) */
+  height: 100%;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
+
+.hongkong-see .slider::before {
+  left: 0;
+  top: 0;
+}
+
+.hongkong-see .slider::after {
+  right: 0;
+  top: 0;
+}
+
+.slider-track {
+  display: flex;
+  margin-top: 10%;
+  /*  width: 4500px;*/
+  /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  animation: hongkongh 40s linear infinite;
+}
+
+@keyframes hongkongh {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-4500px);
+    /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  }
+}
+/* Conteneur pour les diapositives (slides) */
+.hongkong-see .slider .slide {
+  height: 300px;
+  width: 650px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transitions pour l'effet de zoom et les ombres */
+  margin: 20px; /* Marge entre les diapositives (ajustez selon vos préférences) */
+}
+
+/* Effet de zoom au survol */
+.hongkong-see .slider .slide:hover {
+  transform: scale(1.05); /* Effet de zoom au survol */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Ombre douce au survol */
+  filter: brightness(1.2); /* Luminosité accrue au survol */
+}
+
+/* Style de l'image à l'intérieur de la diapositive */
+.hongkong-see .slider .slide a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* CSS pour arrêter l'animation de défilement (si nécessaire)*/
+.stop-scrolling {
+  animation-play-state: paused !important;
+}
+
+/* Style pour la div .villas-contenu */
+.hongkong-see .slider .slide .villas-contenu {
+  position: absolute;
+  top: 50%;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: transparent;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 24px;
+}
+
+/* Style du texte dans la div .villas-contenu */
+.hongkong-see .slider .slide .villas-contenu .text p a, .hongkong-see .slider .slide .villas-contenu .text span a {
+  font-size: 20px; /* Taille de police (ajustez selon vos préférences) */
+  color: rgb(0, 195, 255); /* Couleur du texte (ajustez selon vos préférences) */
+  margin: 0;
+  padding: 10px;
+  margin-bottom: 2%;
+  line-height: 5px;
+  font-size: 34px;
+  transition: opacity 0.3s ease; /* Transition pour l'opacité du texte */
+}
+
+.hongkong-see .slider .slide .villas-contenu .text span a {
+  margin-bottom: 3%;
+  margin-top: 1%;
+  font-size: 24px;
+}
+
+/* Ajustez l'opacité de la div .villas-contenu au survol */
+.hongkong-see .slider .slide:hover .villas-contenu {
+  opacity: 1;
+}
+
+/* Ajustez l'espacement entre les éléments .icons */
+.hongkong-see .slider .slide .villas-contenu .icons {
+  margin-top: 5%; /* Espacement vers le haut */
+}
+
+/* Style pour les éléments dans la div .icons */
+.hongkong-see .slider .slide .villas-contenu .icons div img {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+}
+
+/* Style spécifique pour les éléments de texte dans la div .icons */
+.hongkong-see .slider .slide .villas-contenu .icons span {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+  margin-bottom: 5%;
+  font-size: 24px;
+}
+
+.house-m {
+  margin-top: 5%;
+  background-image: url("/images/birmingham-pis-vdh.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  width: 80%;
+  padding: 48px 32px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  background-repeat: no-repeat;
+}
+
+/* Styles d'animation pour .house-m */
+.house-m.fade-in {
+  opacity: 1;
+  /* L'opacité devient 1 pour montrer l'élément */
+  transform: translateY(0);
+  /* Retour à la position d'origine */
+}
+
+/* Style d'animation pour la section .house-m */
+.house-m.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.birmingham-titre,
+.birmingham-gallery {
+  margin: auto;
+  width: 85%;
+  display: flex;
+  padding: 48px 32px;
+}
+
+.birmingham-titre .left {
+  width: 33.333%;
+}
+
+.birmingham-titre .center {
+  width: 50%;
+  margin-top: -3%;
+}
+
+.birmingham-titre .right {
+  width: 16.333%;
+}
+
+.birmingham-titre .left {
+  padding: 10px;
+  align-content: center;
+  align-items: center;
+}
+
+.birmingham-titre .center {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+}
+
+.axe {
+  padding: 10px 10px 10px 10px;
+  width: 33.333%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.axe img {
+  color: #00b7ff;
+  width: 85px;
+  margin-bottom: 5%;
+}
+
+.axe span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.birmingham-titre .right {
+  padding: 10px;
+  text-align: right;
+}
+
+.birmingham-titre .right a {
+  display: inline-block;
+  background-color: #009688;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px 50px 50px 50px;
+  transition: background-color 0.3s ease;
+}
+
+.birmingham-titre .right a:hover {
+  background-color: #00796B;
+}
+
+.birmingham-description {
+  padding: 48px 32px;
+  /*  padding: 100px 0px 100px 0px;*/
+  margin: auto;
+  width: 85%;
+  display: flex;
+}
+
+.birmingham-description .left,
+.birmingham-description .center,
+.birmingham-description .right {
+  width: 33.333%;
+}
+
+.birmingham-description .left,
+.birmingham-description .center,
+.birmingham-description .right {
+  padding: 32px 25px 25px 25px;
+}
+
+.birmingham-description .left h1 {
+  margin-left: -3%;
+}
+
+.birmingham-description .center h1 {
+  text-align: start;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+}
+
+.birmingham-description .center p {
+  line-height: 29px;
+  text-align: left;
+}
+
+.birmingham-description .right .bottom {
+  margin-bottom: 15px;
+}
+
+.birmingham-description .right p {
+  line-height: 29px;
+  text-align: right;
+}
+
+.birmingham-gallery h2 {
+  width: 25%;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.birmingham-gallery img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.birmingham-gallery img:hover {
+  transform: scale(1.05);
+  /* Augmente la taille de l'image au survol */
+}
+
+.birmingham-gallery .grid-wrapper {
+  display: grid;
+  width: 75%;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.birmingham-gallery .grid-wrapper .wide {
+  grid-column: span 2;
+}
+
+.birmingham-gallery .grid-wrapper .tall {
+  grid-row: span 2;
+}
+
+.birmingham-gallery .grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.birmingham-gallery .grid-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.birmingham-gallery .grid-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.birmingham-see {
+  padding: 48px 32px;
+  margin: auto;
+  width: 85%;
+}
+
+/* Conteneur principal du carrousel */
+.birmingham-see .slider {
+  height: 100%;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Pseudo-éléments pour créer un dégradé sur les côtés du carrousel */
+.birmingham-see .slider::before,
+.birmingham-see .slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15px; /* Largeur des dégradés (ajustez selon vos préférences) */
+  height: 100%;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
+
+.birmingham-see .slider::before {
+  left: 0;
+  top: 0;
+}
+
+.birmingham-see .slider::after {
+  right: 0;
+  top: 0;
+}
+
+.slider-track {
+  display: flex;
+  margin-top: 10%;
+  /*  width: 4500px;*/
+  /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  animation: birminghamh 40s linear infinite;
+}
+
+@keyframes birminghamh {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-4500px);
+    /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  }
+}
+/* Conteneur pour les diapositives (slides) */
+.birmingham-see .slider .slide {
+  height: 300px;
+  width: 650px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transitions pour l'effet de zoom et les ombres */
+  margin: 20px; /* Marge entre les diapositives (ajustez selon vos préférences) */
+}
+
+/* Effet de zoom au survol */
+.birmingham-see .slider .slide:hover {
+  transform: scale(1.05); /* Effet de zoom au survol */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Ombre douce au survol */
+  filter: brightness(1.2); /* Luminosité accrue au survol */
+}
+
+/* Style de l'image à l'intérieur de la diapositive */
+.birmingham-see .slider .slide a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* CSS pour arrêter l'animation de défilement (si nécessaire)*/
+.stop-scrolling {
+  animation-play-state: paused !important;
+}
+
+/* Style pour la div .villas-contenu */
+.birmingham-see .slider .slide .villas-contenu {
+  position: absolute;
+  top: 50%;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: transparent;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 24px;
+}
+
+/* Style du texte dans la div .villas-contenu */
+.birmingham-see .slider .slide .villas-contenu .text p a, .birmingham-see .slider .slide .villas-contenu .text span a {
+  font-size: 20px; /* Taille de police (ajustez selon vos préférences) */
+  color: rgb(0, 195, 255); /* Couleur du texte (ajustez selon vos préférences) */
+  margin: 0;
+  padding: 10px;
+  margin-bottom: 2%;
+  line-height: 5px;
+  font-size: 34px;
+  transition: opacity 0.3s ease; /* Transition pour l'opacité du texte */
+}
+
+.birmingham-see .slider .slide .villas-contenu .text span a {
+  margin-bottom: 3%;
+  margin-top: 1%;
+  font-size: 24px;
+}
+
+/* Ajustez l'opacité de la div .villas-contenu au survol */
+.birmingham-see .slider .slide:hover .villas-contenu {
+  opacity: 1;
+}
+
+/* Ajustez l'espacement entre les éléments .icons */
+.birmingham-see .slider .slide .villas-contenu .icons {
+  margin-top: 5%; /* Espacement vers le haut */
+}
+
+/* Style pour les éléments dans la div .icons */
+.birmingham-see .slider .slide .villas-contenu .icons div img {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+}
+
+/* Style spécifique pour les éléments de texte dans la div .icons */
+.birmingham-see .slider .slide .villas-contenu .icons span {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+  margin-bottom: 5%;
+  font-size: 24px;
+}
+
+.house-m {
+  margin-top: 5%;
+  background-image: url("/images/afdusud-pis-vdh.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  width: 80%;
+  padding: 48px 32px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  background-repeat: no-repeat;
+}
+
+/* Styles d'animation pour .house-m */
+.house-m.fade-in {
+  opacity: 1;
+  /* L'opacité devient 1 pour montrer l'élément */
+  transform: translateY(0);
+  /* Retour à la position d'origine */
+}
+
+/* Style d'animation pour la section .house-m */
+.house-m.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.afdusud-titre,
+.afdusud-gallery {
+  margin: auto;
+  width: 85%;
+  display: flex;
+  padding: 48px 32px;
+}
+
+.afdusud-titre .left {
+  width: 33.333%;
+}
+
+.afdusud-titre .center {
+  width: 50%;
+  margin-top: -3%;
+}
+
+.afdusud-titre .right {
+  width: 16.333%;
+}
+
+.afdusud-titre .left {
+  padding: 10px;
+  align-content: center;
+  align-items: center;
+}
+
+.afdusud-titre .center {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+}
+
+.axe {
+  padding: 10px 10px 10px 10px;
+  width: 33.333%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.axe img {
+  color: #00b7ff;
+  width: 85px;
+  margin-bottom: 5%;
+}
+
+.axe span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.afdusud-titre .right {
+  padding: 10px;
+  text-align: right;
+}
+
+.afdusud-titre .right a {
+  display: inline-block;
+  background-color: #009688;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px 50px 50px 50px;
+  transition: background-color 0.3s ease;
+}
+
+.afdusud-titre .right a:hover {
+  background-color: #00796B;
+}
+
+.afdusud-description {
+  padding: 48px 32px;
+  /*  padding: 100px 0px 100px 0px;*/
+  margin: auto;
+  width: 85%;
+  display: flex;
+}
+
+.afdusud-description .left,
+.afdusud-description .center,
+.afdusud-description .right {
+  width: 33.333%;
+}
+
+.afdusud-description .left,
+.afdusud-description .center,
+.afdusud-description .right {
+  padding: 32px 25px 25px 25px;
+}
+
+.afdusud-description .left h1 {
+  margin-left: -3%;
+}
+
+.afdusud-description .center h1 {
+  text-align: start;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+}
+
+.afdusud-description .center p {
+  line-height: 29px;
+  text-align: left;
+}
+
+.afdusud-description .right .bottom {
+  margin-bottom: 15px;
+}
+
+.afdusud-description .right p {
+  line-height: 29px;
+  text-align: right;
+}
+
+.afdusud-gallery h2 {
+  width: 25%;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.afdusud-gallery img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.afdusud-gallery img:hover {
+  transform: scale(1.05);
+  /* Augmente la taille de l'image au survol */
+}
+
+.afdusud-gallery .grid-wrapper {
+  display: grid;
+  width: 75%;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.afdusud-gallery .grid-wrapper .wide {
+  grid-column: span 2;
+}
+
+.afdusud-gallery .grid-wrapper .tall {
+  grid-row: span 2;
+}
+
+.afdusud-gallery .grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.afdusud-gallery .grid-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.afdusud-gallery .grid-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.afdusud-see {
+  padding: 48px 32px;
+  margin: auto;
+  width: 85%;
+}
+
+/* Conteneur principal du carrousel */
+.afdusud-see .slider {
+  height: 100%;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Pseudo-éléments pour créer un dégradé sur les côtés du carrousel */
+.afdusud-see .slider::before,
+.afdusud-see .slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15px; /* Largeur des dégradés (ajustez selon vos préférences) */
+  height: 100%;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
+
+.afdusud-see .slider::before {
+  left: 0;
+  top: 0;
+}
+
+.afdusud-see .slider::after {
+  right: 0;
+  top: 0;
+}
+
+.slider-track {
+  display: flex;
+  margin-top: 10%;
+  /*  width: 4500px;*/
+  /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  animation: afdusudh 40s linear infinite;
+}
+
+@keyframes afdusudh {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-4500px);
+    /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+  }
+}
+/* Conteneur pour les diapositives (slides) */
+.afdusud-see .slider .slide {
+  height: 300px;
+  width: 650px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transitions pour l'effet de zoom et les ombres */
+  margin: 20px; /* Marge entre les diapositives (ajustez selon vos préférences) */
+}
+
+/* Effet de zoom au survol */
+.afdusud-see .slider .slide:hover {
+  transform: scale(1.05); /* Effet de zoom au survol */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Ombre douce au survol */
+  filter: brightness(1.2); /* Luminosité accrue au survol */
+}
+
+/* Style de l'image à l'intérieur de la diapositive */
+.afdusud-see .slider .slide a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* CSS pour arrêter l'animation de défilement (si nécessaire)*/
+.stop-scrolling {
+  animation-play-state: paused !important;
+}
+
+/* Style pour la div .villas-contenu */
+.afdusud-see .slider .slide .villas-contenu {
+  position: absolute;
+  top: 50%;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: transparent;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 24px;
+}
+
+/* Style du texte dans la div .villas-contenu */
+.afdusud-see .slider .slide .villas-contenu .text p a, .afdusud-see .slider .slide .villas-contenu .text span a {
+  font-size: 20px; /* Taille de police (ajustez selon vos préférences) */
+  color: rgb(0, 195, 255); /* Couleur du texte (ajustez selon vos préférences) */
+  margin: 0;
+  padding: 10px;
+  margin-bottom: 2%;
+  line-height: 5px;
+  font-size: 34px;
+  transition: opacity 0.3s ease; /* Transition pour l'opacité du texte */
+}
+
+.afdusud-see .slider .slide .villas-contenu .text span a {
+  margin-bottom: 3%;
+  margin-top: 1%;
+  font-size: 24px;
+}
+
+/* Ajustez l'opacité de la div .villas-contenu au survol */
+.afdusud-see .slider .slide:hover .villas-contenu {
+  opacity: 1;
+}
+
+/* Ajustez l'espacement entre les éléments .icons */
+.afdusud-see .slider .slide .villas-contenu .icons {
+  margin-top: 5%; /* Espacement vers le haut */
+}
+
+/* Style pour les éléments dans la div .icons */
+.afdusud-see .slider .slide .villas-contenu .icons div img {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+}
+
+/* Style spécifique pour les éléments de texte dans la div .icons */
+.afdusud-see .slider .slide .villas-contenu .icons span {
+  color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+  margin-bottom: 5%;
+  font-size: 24px;
+}
+
+.suitss {
+  padding: 15px;
+  display: flex;
+}
+
+.suits .titre {
+  width: 35%;
+  padding: 20px;
+}
+
+.suits-text {
+  padding: 20px;
+  font-size: 20px;
+  width: 60%;
+}
+
+.low .babidi {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  justify-content: center;
+}
+
+.card {
+  border-radius: 20px;
+  width: 50%;
+  height: 500px;
+  overflow: hidden;
+  margin-top: 5%;
+  margin-left: 2%;
+  position: relative;
+}
+
+.card-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border: 5px solid rgb(0, 89, 255);
+  height: 100%;
+  border-radius: 15px;
+}
+
+.card:hover .card-body {
+  top: 0;
+}
+
+.card-body {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: -100%;
+  border-radius: 15px;
+  right: 0;
+  position: absolute;
+  background: rgba(31, 61, 71, 0.2196078431);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  color: #ffffff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  transition: 2s;
+  justify-content: center;
+}
+
+.card-body h1 a {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.p___description:hover {
+  font-size: 25px;
+  position: relative;
+  color: #00eeff;
+  transition: 3s;
+  -webkit-text-stroke: 0.3vw #383d52;
+  text-transform: uppercase;
+}
+
+.p___description:hover::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 0;
+  top: 1px;
+  height: 100%;
+  color: #00eeff;
+  -webkit-text-stroke: 0vw #383d52;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+  margin-bottom: 3%;
+}
+
+@keyframes animate {
+  0%, 10%, 100% {
+    width: 0;
+  }
+  70%, 90% {
+    width: 100%;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.p__name:hover {
+  animation: flash 3s linear infinite;
+}
+
+.card-body p {
+  margin-top: 3%;
+  text-transform: capitalize;
+  font-size: 34px;
+  font-weight: 400;
+  margin-bottom: 3%;
+}
+
+.jolo {
+  font-size: 40px;
+  font-weight: 400;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ab {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 27px;
+}
+
+.bc {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.bc p {
+  font-size: 18px;
+  margin: 20px 20px;
+  padding: 20px 20px;
+}
+
+.card-btn {
+  position: relative;
+  width: 200px;
+  top: 6%;
+  height: 60px;
+  background: #8fabba;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  text-transform: capitalize;
+  color: rgb(0, 4, 255);
+  letter-spacing: 2px;
+  padding-left: 40px;
+  transition: 0.5s;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.35);
+  border-left: 0.5px solid rgba(255, 255, 255, 0.35);
+}
+
+.card-btn a span {
+  position: absolute;
+  width: 50px;
+  top: 3px;
+  left: 5px;
+  height: 50px;
+  background: #001dbe;
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.card-btn a {
+  font-size: 19px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card-btn:hover {
+  padding-left: 0;
+  padding-right: 40px;
+  color: rgb(255, 255, 255);
+}
+
+.card-btn:hover a span {
+  left: 73%;
+}
+
+.ab i {
+  margin: 0 15px;
+}
+
+.villa {
+  padding: 15px;
+  display: flex;
+}
+
+.villa .titre {
+  width: 35%;
+  padding: 20px;
+}
+
+.villas-text {
+  padding: 20px;
+  font-size: 20px;
+  width: 60%;
+}
+
+.lesvillas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.ville {
+  padding: 20px;
+}
+
+.ville a img {
+  padding: 15px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.ville a:hover img {
+  transform: scale(1) translateY(-10px); /* Agrandir l'image et la déplacer vers le haut au survol */
+  transition: 0.5s;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+
+.villas-contenu {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.villas-contenu .text {
+  margin: 0 20px;
+  font-size: 21px;
+}
+
+.villas-contenu .text p {
+  font-weight: 500;
+  letter-spacing: 5px;
+  cursor: pointer;
+  color: #222222;
+  margin-bottom: 16px;
+}
+
+.villas-contenu .text p span {
+  transition: 0.5s;
+}
+
+.text p:hover span:nth-child(1) {
+  margin-right: 10px;
+}
+
+.text p:hover span:nth-child(1)::after {
+  content: "la";
+}
+
+.text p:hover span:nth-child(2) {
+  margin-left: 40px;
+}
+
+.text p:hover span {
+  color: rgb(0, 153, 255);
+  text-shadow: 0 0 10px rgb(0, 153, 255), 0 0 20px rgb(0, 153, 255), 0 0 40px rgb(0, 153, 255), 0 0 80px rgb(0, 153, 255), 0 0 120px rgb(0, 153, 255), 0 0 160px rgb(0, 153, 255);
+}
+
+/* Style de base */
+.private-pool {
+  /* Autres styles */
+  color: #222222;
+  transition: transform 0.3s ease-in-out; /* Animation de 0,3 seconde avec une accélération/décélération */
+}
+
+/* Style au survol */
+.private-pool:hover {
+  margin-bottom: 3px;
+  color: rgb(0, 153, 255);
+  font-size: 30px;
+  text-transform: uppercase;
+  transform: scale(1.1); /* Zoom de 10% au survol */
+}
+
+.villas-contenu .icons {
+  display: flex;
+  gap: 33px;
+  font-size: 20px;
+}
+
+.villas-contenu .icons div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.icons div img {
+  width: 50px;
+  margin-top: -15px;
+  margin-bottom: 14px;
+}

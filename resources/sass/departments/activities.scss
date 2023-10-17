@@ -1,0 +1,75 @@
+.acti
+{
+background-image: url('/images/mongolf.jpeg');
+background-position: center;
+background-size: cover;
+height: 400px;
+width: 100%;
+text-align: center;
+color: #ffffff;
+font-size: 38px;
+font-weight: bold;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+.acti h2
+{
+    margin-bottom: 4%;
+}
+
+ .head{
+    text-align: center;
+}
+
+ .head h2{
+    margin-top: 4%;
+    margin-bottom: 1%;
+    font-size: 40px;
+}
+
+
+.activ{
+    display: flex;
+    margin-top: 3%;
+    align-items: center;
+    justify-content: center;
+}
+
+.activ
+.left,.activ .right
+{
+    width: 50%;
+}
+
+.activ .left{
+    padding: 4%;
+    text-align: start;
+}
+
+
+
+.activ .left h2{
+   margin-bottom: 20px;
+   font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+.activ .left p{
+   letter-spacing: 3px;
+   line-height: 1.5;
+   font-size: 20px;
+ }
+
+.activ .right img{
+    height: 500px;
+    width: 100%;
+}
+
+.inazuma{
+    margin-top: -4px;
+}

@@ -1,0 +1,161 @@
+/* gallery.css */
+.gallery {
+    padding: 80px 0; /* Haut et bas: 80px, Gauche et droite: 0 */
+}
+
+.gallery h1 {
+    font-size: 48px; /* Taille de la police */
+    font-weight: 700; /* Épaisseur de la police (gras) */
+    text-align: left; /* Aligner le texte à gauche */
+    color: #e2e2e2; /* Couleur du texte (par exemple, une nuance de gris foncé) */
+    margin-top: 20px; /* Marge en haut du titre */
+    margin-bottom: 40px; /* Marge en bas du titre */
+    background-color: #f5f5f5; /* Couleur de fond (par exemple, une nuance de gris clair) */
+    padding: 20px; /* Espace interne autour du texte */
+}
+
+.mainContent {
+    padding: 32px 16px; /* Haut et bas: 32px, Gauche et droite: 16px */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* Ajuster la largeur pour deux éléments par ligne */
+.singleDestination {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    width: calc(50% - 20px); /* 50% de la largeur du parent avec un espace de 20px entre les éléments */
+    height: 400px; /* Hauteur fixe pour chaque élément */
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Ajouter un box-shadow */
+}
+
+/* Styles pour les images */
+.destImage {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.destImage img {
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+/* Styles pour les informations en superposition */
+.overlayInfo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s, padding 0.3s;
+}
+
+.singleDestination:hover .overlayInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    line-height: 2.5;
+    padding: 16px 24px;
+    height: 100%;
+    color: #ffffff;
+   backdrop-filter: blur(5px);
+    background: transparent;
+}
+
+.overlayInfo h3 {
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.overlayInfo p {
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-size: 19px;
+}
+
+/* Styles pour les icônes */
+.icon a {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 4px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #ff0000;
+    border: 1px solid transparent;
+    color: #ffffff;
+    transition: .3s ease;
+}
+
+.icon a:hover {
+    color: #0ef;
+    background: #ffffff;
+}
+
+/* Styles pour le pied de page */
+.destFooter {
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Ajouter un box-shadow */
+    border: 1px solid rgba(178, 178, 178, 1);
+}
+
+.number {
+    font-size: 25px;
+    font-weight: 700;
+    position: relative;
+    width: max-content;
+}
+
+.number::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: -150%;
+    height: 5px;
+    border-radius: 16px;
+}
+
+.desText {
+    justify-content: space-between;
+}
+
+.desText h4 {
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.flex {
+    display: flex;
+    font-size: 21px;
+    font-weight: 600;
+    margin: 0px 5px;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-3px);
+}

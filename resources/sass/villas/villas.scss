@@ -1,0 +1,113 @@
+.villa {
+    padding: 15px;
+    display: flex;
+}
+
+.villa .titre {
+    width: 35%;
+    padding: 20px;
+}
+.villas-text {
+    padding: 20px;
+    font-size: 20px;
+    width: 60%;
+}
+
+.lesvillas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ville {
+    padding: 20px;
+}
+.ville a img {
+    padding: 15px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.ville a:hover img {
+    transform: scale(1) translateY(-10px); /* Agrandir l'image et la déplacer vers le haut au survol */
+    transition: 0.5s;
+    backdrop-filter: blur(2px);
+}
+.villas-contenu {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.villas-contenu .text {
+    margin: 0 20px;
+    font-size: 21px;
+}
+
+.villas-contenu .text p {
+    font-weight: 500;
+    letter-spacing: 5px;
+    cursor: pointer;
+    color: #222222;
+    margin-bottom: 16px;
+}
+
+.villas-contenu .text p span {
+    transition: 0.5s;
+}
+
+.text p:hover span:nth-child(1) {
+    margin-right: 10px;
+}
+
+.text p:hover span:nth-child(1)::after {
+    content: "la";
+}
+.text p:hover span:nth-child(2) {
+    margin-left: 40px;
+}
+
+.text p:hover span {
+    color: rgb(0, 153, 255);
+    text-shadow: 0 0 10px rgb(0, 153, 255), 0 0 20px rgb(0, 153, 255),
+        0 0 40px rgb(0, 153, 255), 0 0 80px rgb(0, 153, 255),
+        0 0 120px rgb(0, 153, 255), 0 0 160px rgb(0, 153, 255);
+}
+
+/* Style de base */
+.private-pool {
+    /* Autres styles */
+    color: #222222;
+
+    transition: transform 0.3s ease-in-out; /* Animation de 0,3 seconde avec une accélération/décélération */
+}
+
+/* Style au survol */
+.private-pool:hover {
+    margin-bottom: 3px;
+    color: rgb(0, 153, 255);
+    font-size: 30px;
+    text-transform: uppercase;
+    transform: scale(1.1); /* Zoom de 10% au survol */
+}
+
+.villas-contenu .icons {
+    display: flex;
+    gap: 33px;
+    font-size: 20px;
+}
+
+.villas-contenu .icons div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.icons div img {
+    width: 50px;
+    margin-top: -15px;
+    margin-bottom: 14px;
+}

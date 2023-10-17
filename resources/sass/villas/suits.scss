@@ -1,0 +1,230 @@
+.suitss{
+    padding: 15px;
+    display: flex;
+}
+
+.suits .titre{
+    width: 35%;
+    padding: 20px;
+}
+.suits-text
+{
+    padding: 20px;
+    font-size: 20px;
+    width: 60%;
+}
+
+
+.low .babidi{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    justify-content: center;
+    }
+
+    .card{
+        border-radius: 20px;
+        width: 50%;
+        height: 500px;
+        overflow: hidden;
+    margin-top: 5%;
+margin-left: 2%;
+        position: relative;
+    }
+
+
+    .card-img{object-fit: cover;
+    width: 100%;
+    border: 5px solid rgb(0, 89, 255);
+    height: 100%;
+    border-radius: 15px;
+    }
+
+    .card:hover .card-body{
+        top: 0;
+    }
+    .card-body{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      top: -100%;
+        border-radius: 15px;
+        right: 0;
+        position: absolute;
+        background: #1f3d4738;
+        backdrop-filter: blur(5px);
+        color: #ffffff;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        transition: 2s;
+        justify-content: center;
+    }
+
+
+
+    .card-body h1 a{
+        text-transform: uppercase;
+        font-size: 40px;
+        font-weight: 500;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+
+    .p___description:hover {
+        font-size: 25px;
+        position: relative;
+        color: #00eeff;
+        transition: 3s;
+        -webkit-text-stroke: 0.3vw #383d52;
+        text-transform: uppercase;
+    }
+
+    .p___description:hover::before {
+        content: attr(data-text);
+        position: absolute;
+        left: 0;
+        width: 0;
+        top: 1px;
+        height: 100%;
+        color: #00eeff;
+        -webkit-text-stroke: 0vw #383d52;
+        overflow: hidden;
+        animation: animate 6s linear infinite;
+        margin-bottom: 3%;
+    }
+
+
+    @keyframes animate {
+
+        0%,
+        10%,
+        100% {
+            width: 0;
+        }
+
+        70%,
+        90% {
+            width: 100%;
+        }
+    }
+
+
+    @keyframes flash {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0.1;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .p__name:hover {
+        animation: flash 3s linear infinite;
+    }
+    .card-body p{
+        margin-top: 3%;
+        text-transform: capitalize;
+        font-size: 34px;
+        font-weight: 400;
+        margin-bottom: 3%;
+    }
+
+    .jolo{
+        font-size: 40px;
+        font-weight: 400;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    .ab{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 27px;
+    }
+    .bc{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+
+
+    }
+    .bc p{
+    font-size: 18px;
+    margin: 20px 20px;
+    padding:20px 20px;
+    }
+
+    .card-btn{
+        position: relative;
+        width: 200px;
+        top: 6%;
+        height: 60px;
+        background: #8fabba;
+        border-radius: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        border: none;
+        outline: none;
+        cursor: pointer;padding: 10px 20px;
+        text-transform: capitalize;
+        color: rgb(0, 4, 255);
+       letter-spacing: 2px;
+       padding-left: 40px;
+       transition: 0.5s;
+       border-top: 0.5px solid rgb(255, 255, 255,0.35);
+       border-left: 0.5px solid rgb(255, 255, 255,0.35);
+    }
+
+    .card-btn a span{
+    position: absolute;
+    width: 50px;
+    top: 3px;
+    left: 5px;
+    height: 50px;
+    background: #001dbe;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 24px;
+    }
+
+    .card-btn a {
+        font-size: 19px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .card-btn:hover{
+        padding-left: 0;
+        padding-right: 40px;
+        color: rgb(255, 255, 255, 1);
+    }
+
+    .card-btn:hover a span{
+        left: 73%;
+    }
+    .ab i{
+        margin:0 15px;
+    }
+
+

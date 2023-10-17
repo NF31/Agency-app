@@ -1,0 +1,348 @@
+.marrakech-m {
+    margin-top: 5%;
+    background-image: url('/images/suits-marrakech/marrakech11.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    width: 80%;
+    padding: 48px 32px;
+    margin: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+    background-repeat: no-repeat;
+}
+
+/* Styles d'animation pour .house-m */
+.marrakech-m.fade-in {
+    opacity: 1;
+    /* L'opacité devient 1 pour montrer l'élément */
+    transform: translateY(0);
+    /* Retour à la position d'origine */
+}
+
+/* Style d'animation pour la section .house-m */
+.marrakech-m.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.marrakech-titre,
+.marrakech-gallery {
+    margin: auto;
+    width: 85%;
+    display: flex;
+    padding: 48px 32px;
+}
+
+.marrakech-titre .left {
+    width: 33.333%;
+}
+
+.marrakech-titre .center {
+    width: 50%;
+    margin-top: -3%;
+}
+
+.marrakech-titre .right {
+    width: 16.333%;
+}
+
+.marrakech-titre .left {
+    padding: 10px;
+    align-content: center;
+    align-items: center;
+}
+
+.marrakech-titre .center {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+}
+
+.axe {
+    padding: 10px 10px 10px 10px;
+    width: 33.333%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.axe img {
+    color: #00b7ff;
+    width: 85px;
+    margin-bottom: 5%;
+}
+
+.axe span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.tokyo-titre .right {
+    padding: 10px;
+    text-align: right;
+}
+
+.marrakech-titre .right a {
+    display: inline-block;
+    line-height: 1;
+    background-color: #818a91;
+    font-size: 15px;
+    padding: 12px 24px;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    transition: all .3s;
+}
+
+
+
+
+.marrakech-description {
+    padding: 48px 32px;
+    /*  padding: 100px 0px 100px 0px;*/
+    margin: auto;
+    width: 85%;
+    display: flex;
+}
+
+.marrakech-description .left,
+.marrakech-description .center,
+.marrakech-description .right {
+    width: 33.333%;
+}
+
+.marrakech-description .left,
+.marrakech-description .center,
+.marrakech-description .right {
+    padding: 32px 25px 25px 25px;
+}
+
+.marrakech-description .left h1 {
+    margin-left: -3%;
+}
+
+.marrakech-description .center h1 {
+    text-align: start;
+    text-transform: uppercase;
+    margin-bottom: 5%;
+}
+
+.marrakech-description .center p {
+    line-height: 29px;
+    text-align: left;
+}
+
+.marrakech-description .right .bottom {
+    margin-bottom: 15px;
+}
+
+.marrakech-description .right p {
+    line-height: 29px;
+    text-align: right;
+}
+
+.marrakech-gallery h2 {
+    width: 25%;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+
+.marrakech-gallery img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.marrakech-gallery img:hover {
+    transform: scale(1.05);
+    /* Augmente la taille de l'image au survol */
+}
+
+.marrakech-gallery .grid-wrapper {
+    display: grid;
+    width: 75%;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+
+}
+
+.marrakech-gallery .grid-wrapper .wide {
+    grid-column: span 2;
+
+}
+
+.marrakech-gallery .grid-wrapper .tall {
+    grid-row: span 2;
+
+}
+
+.marrakech-gallery .grid-wrapper .big {
+    grid-column: span 2;
+    grid-row: span 2;
+
+}
+
+.marrakech-gallery .grid-wrapper div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marrakech-gallery .grid-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.marrakech-see {
+    padding: 48px 32px;
+    margin: auto;
+    width: 85%;
+}
+
+
+
+/* Conteneur principal du carrousel */
+.marrakech-see .slider {
+    height: 100%;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Pseudo-éléments pour créer un dégradé sur les côtés du carrousel */
+.marrakech-see .slider::before,
+.marrakech-see .slider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 15px; /* Largeur des dégradés (ajustez selon vos préférences) */
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 2;
+}
+
+.marrakech-see .slider::before {
+    left: 0;
+    top: 0;
+}
+
+.marrakech-see .slider::after {
+    right: 0;
+    top: 0;
+}
+
+.slider-track {
+    display: flex;
+    margin-top: 10%;
+  /*  width: 4500px;*/
+    /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+ animation: miamih 40s linear infinite;
+}
+
+@keyframes miamih {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-4500px);
+        /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+    }
+}
+/* Conteneur pour les diapositives (slides) */
+.marrakech-see .slider .slide {
+    width: 650px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    perspective: 100px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transitions pour l'effet de zoom et les ombres */
+    margin: 20px; /* Marge entre les diapositives (ajustez selon vos préférences) */
+}
+
+/* Effet de zoom au survol */
+.marrakech-see .slider .slide:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Ombre douce au survol */
+    filter: brightness(1.2); /* Luminosité accrue au survol */
+}
+
+/* Style de l'image à l'intérieur de la diapositive */
+.marrakech-see .slider .slide a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CSS pour arrêter l'animation de défilement (si nécessaire)*/
+.stop-scrolling {
+    animation-play-state: paused !important;
+}
+
+.marrakech-see .slider .slide .villas-contenu {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+/* Style du texte dans la div .villas-contenu */
+.marrakech-see .slider .slide .villas-contenu .text p a, .miami-see .slider .slide .villas-contenu .text span a{
+    font-size: 20px; /* Taille de police (ajustez selon vos préférences) */
+    color: rgb(0, 195, 255); /* Couleur du texte (ajustez selon vos préférences) */
+    margin: 0;
+    padding: 10px;
+    margin-bottom: 2%;
+    line-height: 5px;
+    font-size: 34px;
+    transition: opacity 0.3s ease; /* Transition pour l'opacité du texte */
+}
+.marrakech-see .slider .slide .villas-contenu .text {
+    margin-left: -2%;
+    font-size: 21px;
+}
+.marrakech-see .slider .slide .villas-contenu .text span a {
+    margin-bottom: 3%;
+    margin-top: 1%;
+    font-size: 24px;
+}
+/* Ajustez l'opacité de la div .villas-contenu au survol */
+.marrakech-see .slider .slide:hover .villas-contenu {
+    opacity: 1;
+}
+
+/* Ajustez l'espacement entre les éléments .icons */
+.marrakech-see .slider .slide .villas-contenu .icons {
+    margin-top: 5%; /* Espacement vers le haut */
+}
+
+/* Style pour les éléments dans la div .icons */
+.marrakech-see .slider .slide .villas-contenu .icons div img  {
+    color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+}
+
+/* Style spécifique pour les éléments de texte dans la div .icons */
+.marrakech-see .slider .slide .villas-contenu .icons span {
+    color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+    margin-bottom: 5%;
+    font-size: 24px;
+}

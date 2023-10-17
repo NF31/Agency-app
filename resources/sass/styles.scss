@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Styles pour la barre de navigation */
+.navbar {
+    background-color: #0078d4; /* Couleur bleu océan pour la barre de navigation */
+    padding: 10px 20px;
+    color: #fff; /* Couleur blanche pour le texte */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100px; /* Largeur maximale du logo */
+}
+
+.navlinks-container {
+    display: flex;
+    align-items: center;
+}
+
+.links {
+    list-style: none;
+    display: flex;
+   
+}
+
+.links li {
+    margin-right: 30px;
+    position: relative;
+}
+
+.links li a {
+    color: #fff; /* Couleur blanche pour les liens de navigation */
+    text-decoration: none;
+}
+
+.arrow {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+   right: -20px;
+}
+
+/* Styles pour le menu déroulant */
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #0078d4; /* Couleur bleu océan pour le menu déroulant */
+    min-width: 150px;
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+}
+
+.sub-menu li {
+    margin-bottom: 10px;
+}
+
+/* Styles pour les liens "Login" et "Register" */
+.auth-links a {
+    color: #fff; /* Couleur blanche pour les liens d'authentification */
+    text-decoration: none;
+    margin-left: 20px;
+}

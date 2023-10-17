@@ -1,0 +1,348 @@
+.bali-m {
+    margin-top: 5%;
+    background-image: url('/images/Bali-Villa.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    width: 80%;
+    padding: 48px 32px;
+    margin: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+    background-repeat: no-repeat;
+}
+
+/* Styles d'animation pour .house-m */
+.bali-m.fade-in {
+    opacity: 1;
+    /* L'opacité devient 1 pour montrer l'élément */
+    transform: translateY(0);
+    /* Retour à la position d'origine */
+}
+
+/* Style d'animation pour la section .house-m */
+.bali-m.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bali-titre,
+.bali-gallery {
+    margin: auto;
+    width: 85%;
+    display: flex;
+    padding: 48px 32px;
+}
+
+.bali-titre .left {
+    width: 33.333%;
+}
+
+.bali-titre .center {
+    width: 50%;
+    margin-top: -3%;
+}
+
+.bali-titre .right {
+    width: 16.333%;
+}
+
+.bali-titre .left {
+    padding: 10px;
+    align-content: center;
+    align-items: center;
+}
+
+.bali-titre .center {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+}
+
+.axe {
+    padding: 10px 10px 10px 10px;
+    width: 33.333%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.axe img {
+    color: #00b7ff;
+    width: 85px;
+    margin-bottom: 5%;
+}
+
+.axe span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.bali-titre .right {
+    padding: 10px;
+    text-align: right;
+}
+
+.bali-titre .right a {
+    display: inline-block;
+    line-height: 1;
+    background-color: #818a91;
+    font-size: 15px;
+    padding: 12px 24px;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    transition: all .3s;
+}
+
+
+
+
+.bali-description {
+    padding: 48px 32px;
+    /*  padding: 100px 0px 100px 0px;*/
+    margin: auto;
+    width: 85%;
+    display: flex;
+}
+
+.bali-description .left,
+.bali-description .center,
+.bali-description .right {
+    width: 33.333%;
+}
+
+.bali-description .left,
+.bali-description .center,
+.bali-description .right {
+    padding: 32px 25px 25px 25px;
+}
+
+.bali-description .left h1 {
+    margin-left: -3%;
+}
+
+.bali-description .center h1 {
+    text-align: start;
+    text-transform: uppercase;
+    margin-bottom: 5%;
+}
+
+.bali-description .center p {
+    line-height: 29px;
+    text-align: left;
+}
+
+.bali-description .right .bottom {
+    margin-bottom: 15px;
+}
+
+.bali-description .right p {
+    line-height: 29px;
+    text-align: right;
+}
+
+.bali-gallery h2 {
+    width: 25%;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+
+.bali-gallery img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.bali-gallery img:hover {
+    transform: scale(1.05);
+    /* Augmente la taille de l'image au survol */
+}
+
+.bali-gallery .grid-wrapper {
+    display: grid;
+    width: 75%;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+
+}
+
+.bali-gallery .grid-wrapper .wide {
+    grid-column: span 2;
+
+}
+
+.bali-gallery .grid-wrapper .tall {
+    grid-row: span 2;
+
+}
+
+.bali-gallery .grid-wrapper .big {
+    grid-column: span 2;
+    grid-row: span 2;
+
+}
+
+.bali-gallery .grid-wrapper div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bali-gallery .grid-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.bali-see {
+    padding: 48px 32px;
+    margin: auto;
+    width: 85%;
+}
+
+
+
+/* Conteneur principal du carrousel */
+.bali-see .slider {
+    height: 100%;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Pseudo-éléments pour créer un dégradé sur les côtés du carrousel */
+.bali-see .slider::before,
+.bali-see .slider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 15px; /* Largeur des dégradés (ajustez selon vos préférences) */
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 2;
+}
+
+.bali-see .slider::before {
+    left: 0;
+    top: 0;
+}
+
+.bali-see .slider::after {
+    right: 0;
+    top: 0;
+}
+
+.slider-track {
+    display: flex;
+    margin-top: 10%;
+  /*  width: 4500px;*/
+    /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+ animation: miamih 40s linear infinite;
+}
+
+@keyframes miamih {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-4500px);
+        /* Ajustez cette valeur en pixels en fonction de la largeur totale de vos éléments .slide */
+    }
+}
+/* Conteneur pour les diapositives (slides) */
+.bali-see .slider .slide {
+    width: 650px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    perspective: 100px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transitions pour l'effet de zoom et les ombres */
+    margin: 20px; /* Marge entre les diapositives (ajustez selon vos préférences) */
+}
+
+/* Effet de zoom au survol */
+.bali-see .slider .slide:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Ombre douce au survol */
+    filter: brightness(1.2); /* Luminosité accrue au survol */
+}
+
+/* Style de l'image à l'intérieur de la diapositive */
+.bali-see .slider .slide a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CSS pour arrêter l'animation de défilement (si nécessaire)*/
+.stop-scrolling {
+    animation-play-state: paused !important;
+}
+
+.bali-see .slider .slide .villas-contenu {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+/* Style du texte dans la div .villas-contenu */
+.bali-see .slider .slide .villas-contenu .text p a, .miami-see .slider .slide .villas-contenu .text span a{
+    font-size: 20px; /* Taille de police (ajustez selon vos préférences) */
+    color: rgb(0, 195, 255); /* Couleur du texte (ajustez selon vos préférences) */
+    margin: 0;
+    padding: 10px;
+    margin-bottom: 2%;
+    line-height: 5px;
+    font-size: 34px;
+    transition: opacity 0.3s ease; /* Transition pour l'opacité du texte */
+}
+.bali-see .slider .slide .villas-contenu .text {
+    margin-left: -2%;
+    font-size: 21px;
+}
+.bali-see .slider .slide .villas-contenu .text span a {
+    margin-bottom: 3%;
+    margin-top: 1%;
+    font-size: 24px;
+}
+/* Ajustez l'opacité de la div .villas-contenu au survol */
+.bali-see .slider .slide:hover .villas-contenu {
+    opacity: 1;
+}
+
+/* Ajustez l'espacement entre les éléments .icons */
+.bali-see .slider .slide .villas-contenu .icons {
+    margin-top: 5%; /* Espacement vers le haut */
+}
+
+/* Style pour les éléments dans la div .icons */
+.bali-see .slider .slide .villas-contenu .icons div img  {
+    color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+}
+
+/* Style spécifique pour les éléments de texte dans la div .icons */
+.bali-see .slider .slide .villas-contenu .icons span {
+    color: rgb(0, 195, 255); /* Couleur du texte (blanc) */
+    margin-bottom: 5%;
+    font-size: 24px;
+}

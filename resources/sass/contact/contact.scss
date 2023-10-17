@@ -1,0 +1,368 @@
+.contact h1 {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 40px;
+}
+
+.contacteme {
+    padding: 10% 10% 10% 10%;
+
+    h3 {
+        text-align: left;
+        margin-left: 9%;
+        font-size: 24px;
+        color: #333;
+        margin-top: 10px;
+        position: relative;
+    }
+    .contacteme h3::before {
+        content: "";
+        position: absolute;
+        left: -6%;
+        top: 38%;
+        width: 5%;
+        height: 2px;
+        background-color: #333;
+        transform: translateY(-50%);
+        z-index: 0;
+    }
+
+    .contacteme h3::after {
+        content: "contacter";
+        left: -2%;
+        top: 100%;
+        margin-left: -1%;
+        color: #333;
+        background-color: #fff;
+        padding: 0 10px;
+    }
+    .cont {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 45px 60px 0px 60px;
+    }
+
+    .cont .left,
+    .cont .center,
+    .cont .right {
+        width: 33.33%;
+        margin: auto;
+        text-align: start;
+        line-height: 2;
+    }
+
+    .cont .center {
+        text-align: center;
+    }
+    .cont .right {
+        text-align: right;
+    }
+    .map {
+        height: 500px;
+        width: 100%;
+        padding: 45px 60px 0px 60px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+    .contact-form {
+        display: flex;
+    }
+    .contact-form .left,
+    .contact-form .right {
+        width: 50%;
+        padding: 45px 60px 0px 60px;
+    }
+
+    .contact-form .left img {
+        height: 100%;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .contact-form .right h2 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 2%;
+    }
+
+    .contact-form .right p {
+        line-height: 1.7;
+        font-size: 20px;
+    }
+
+    .formBox {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 30px;
+    }
+
+    .inputBox {
+        position: relative;
+        margin: 0 0 35px 0;
+    }
+
+    .inputBox input,
+    textarea {
+        width: 100%;
+        padding: 5px 0;
+        font-size: 18px;
+        font-weight: 300;
+        resize: none;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #777777;
+        color: #333333;
+    }
+
+    .inputBox label {
+        position: absolute;
+        left: 0;
+        padding: 5px 0;
+        font-size: 18px;
+        font-weight: 300;
+        color: #333333;
+        transition: 0.3s;
+        pointer-events: none;
+        transform-origin: 0 0;
+    }
+
+    .inputBox input:focus ~ label,
+    .inputBox textarea:focus ~ label,
+    .inputBox input:not(:placeholder-shown) ~ label,
+    .inputBox textarea:not(:placeholder-shown) ~ label {
+        transform: translateY(-20px);
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: #0ef;
+    }
+    .w50 {
+        width: 47%;
+    }
+
+    .w100 {
+        width: 100%;
+    }
+
+    textarea {
+        min-height: 120px;
+    }
+
+    .error-message {
+        color: red; /* Couleur du texte en rouge */
+        font-size: 14px; /* Taille de la police */
+        /* Ajoutez d'autres styles CSS personnalisés au besoin */
+    }
+
+    /* Style de base pour le champ valide */
+    .valid-field {
+        border: 2px solid green;
+        background-color: #eaffea;
+        color: green;
+        border-radius: 4px; /* Coins arrondis */
+        padding: 10px 20px; /* Espace intérieur du bouton */
+        font-size: 16px; /* Taille de police */
+        cursor: pointer; /* Curseur de type main (pointeur) au survol */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Transition en douceur pour les changements de couleur */
+    }
+
+    /* Style au survol du bouton */
+    .valid-field:hover {
+        background-color: #c0f9c0; /* Couleur de fond au survol */
+        color: #227f22; /* Couleur du texte au survol */
+    }
+
+    /* Style au clic sur le bouton */
+    .valid-field:active {
+        background-color: #a0e6a0; /* Couleur de fond lors du clic */
+        color: #1c5a1c; /* Couleur du texte lors du clic */
+    }
+
+    /* Style pour les champs invalides */
+    .input-field {
+        border: 2px solid red;
+    }
+    .w100 button {
+        padding: 10px 20px;
+        font-size: 20px;
+        outline: none;
+        border: none;
+        color: #ffffff;
+        border-radius: 6px;
+        cursor: pointer;
+        background: rgb(0, 149, 255);
+        transition: 0.3s;
+    }
+
+    .w100 button:hover {
+        background: transparent;
+        color: rgb(0, 149, 255);
+    }
+    .toast {
+        position: relative;
+        right: 100%;
+        bottom: 20px; /* Ajustez cette valeur en fonction de l'espace souhaité entre le bouton et le toast */
+        border-radius: 12px;
+        background: #ffffff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        padding: 20px 35px 20px 25px;
+        border-left: 6px solid #10ba00;
+        overflow: hidden;
+        transition: transform 0.5s, bottom 0.5s; /* Ajoutez la transition pour l'animation de montée du toast */
+        transform: translateX(100%);
+    }
+
+    .toast.active {
+        transform: translateX(0%);
+    }
+
+    .toast-content {
+        display: flex;
+        align-items: center;
+    }
+
+    .toast-content .check {
+        height: 35px;
+        width: 35px;
+        background: #10ba00;
+        color: #ffffff;
+        font-size: 20px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .toast-content .message {
+        display: flex;
+        flex-direction: column;
+        margin: 0 20px;
+    }
+
+    .message .text {
+        font-size: 20px;
+        font-weight: 600;
+        color: #666666;
+    }
+
+    .message .text.text-1 {
+        font-weight: 600;
+        color: #333333;
+    }
+
+    .toast .close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        padding: 5px;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: 0.3s;
+    }
+
+    .toast .close:hover {
+        opacity: 1;
+    }
+
+    .toast .progress {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 0;
+        background: #dddddd;
+        transition: width 0.5s ease; /* Ajout d'une transition pour l'animation */
+    }
+
+    .toast .progress::before {
+        position: absolute;
+        bottom: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        right: 0;
+        background: #10ba00;
+        transition: width 0.5s ease; /* Ajout d'une transition pour l'animation */
+    }
+
+    .progress.active::before {
+        width: 100%;
+        animation: progress 5s linear forwards;
+    }
+
+    @keyframes progress {
+        100% {
+            right: 100%;
+        }
+    }
+}
+
+.faq {
+    width: 100%;
+    background-color: #f6f6fa;
+    padding: 45px 0px 45px 0px;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    padding-left: 11%;
+
+    .left,
+    .right {
+        width: 50%;
+    }
+
+    .left {
+        align-content: center;
+        /* align-items: center;*/
+        margin: 0px 0px 0px 50px;
+        padding: 15px;
+    }
+
+    .faq .left h2 {
+        margin-bottom: 4%;
+        text-align: start;
+    }
+
+    .left p {
+        line-height: 1.8;
+        font-size: 20px;
+    }
+
+    .right {
+        margin: auto;
+    }
+    .right div {
+        display: flex;
+        padding: 15px;
+        margin: 0px 0px 0px 50px;
+    }
+
+    .right div a button {
+        padding: 10px 20px;
+        font-size: 20px;
+        outline: none;
+        border: none;
+        color: #ffffff;
+        border-radius: 6px;
+        cursor: pointer;
+        background: rgb(0, 149, 255);
+        transition: 0.3s;
+        text-transform: uppercase;
+    }
+
+    .right a button:hover {
+        background: transparent;
+        color: rgb(0, 149, 255);
+    }
+}
